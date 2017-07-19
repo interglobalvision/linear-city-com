@@ -1,10 +1,10 @@
-globie-wordpress-starter-pack
+Linear City
 ---
-v 1.7.6
+v 1.0.0
 
-Starting point for our wordpress themes
+Theme for linearcity.com
 
-`git clone git@github.com:interglobalvision/globie-wordpress-starter-pack.git`
+`git clone git@github.com:interglobalvision/linear-city-com`
 
 Tech this uses [thnx]:
 
