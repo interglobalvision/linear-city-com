@@ -8,6 +8,9 @@ function add_menu_icons_styles(){
 #menu-posts-property .dashicons-admin-post:before {
   content: "\f541";
 }
+#menu-posts-press_quote .dashicons-admin-post:before {
+  content: "\f122";
+}
 #menu-posts-project .dashicons-admin-post:before {
   content: '\f319';
 }
