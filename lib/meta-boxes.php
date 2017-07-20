@@ -39,5 +39,50 @@ function igv_cmb_metaboxes() {
    * Reference: https://github.com/WebDevStudios/CMB2/blob/master/example-functions.php
 	 */
 
+
+  // PROPERTY METABOXES
+  $cmb_property = new_cmb2_box( array(
+    'id'            => $prefix . 'property_metabox',
+    'title'         => esc_html__( 'Information', 'cmb2' ),
+    'object_types'  => array( 'property', ), // Post type
+  ) );
+
+  $cmb_property->add_field( array(
+    'name'       => esc_html__( 'Summary', 'cmb2' ),
+    'id'         => $prefix . 'property_summary',
+    'type'       => 'textarea_small',
+  ) );
+
+  $cmb_property->add_field( array(
+    'name'       => esc_html__( 'Gallery', 'cmb2' ),
+    'id'         => $prefix . 'property_gallery',
+    'type'       => 'file_list',
+  ) );
+
+  $cmb_property->add_field( array(
+    'name'       => esc_html__( 'Bottom image', 'cmb2' ),
+    'id'         => $prefix . 'property_bottom_image',
+    'type'       => 'file',
+  ) );
+
+  // PRESS QUOTES METABOXES
+  $cmb_property = new_cmb2_box( array(
+    'id'            => $prefix . 'press_metabox',
+    'title'         => esc_html__( 'Information', 'cmb2' ),
+    'object_types'  => array( 'press_quote', ), // Post type
+  ) );
+
+  $cmb_property->add_field( array(
+    'name'       => esc_html__( 'Quote Text', 'cmb2' ),
+    'id'         => $prefix . 'quote_text',
+    'type'       => 'textarea_small',
+  ) );
+
+  $cmb_property->add_field( array(
+    'name'       => esc_html__( 'Quote Link', 'cmb2' ),
+    'id'         => $prefix . 'quote_link',
+    'type'       => 'text_url',
+  ) );
+
 }
 ?>
