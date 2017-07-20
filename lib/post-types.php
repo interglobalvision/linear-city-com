@@ -108,22 +108,6 @@ function register_cpt_press_quote() {
   register_post_type( 'press_quote', $args );
 }
 
-// Redirect all press_quotes singles to /press
-add_action( 'template_redirect', 'single_press_quotes_redirect' );
-
-function single_press_quotes_redirect() {
-  $queried_post_type = get_query_var('press_quote');
-  if ( is_single() && 'press_quote' ==  $queried_post_type ) {
-    wp_redirect( get_post_type_archive_link('press_quote'), 302 );
-    // NOTE:
-    // Status 302 means Found. More here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302
-    // This should be switched to 301 on prodution or after dev. It's 302
-    // to avoid horrible redirect caching in the browser
-    exit;
-  }
-}
-
-
 add_action( 'init', 'register_cpt_project' );
 
 function register_cpt_project() {
