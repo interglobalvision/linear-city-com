@@ -11,6 +11,33 @@ $metabox = array(
   'show_on'    => array( 'key' => 'options-page', 'value' => array( $page_key ), ), //value must be same as id
   'show_names' => true,
   'fields'     => array(
+
+    // FOOTER OPTIONS
+    array(
+      'name' => __( 'Footer options', 'cmb2' ),
+      'desc' => __( 'Information displayed in the footer', 'cmb2' ),
+      'id'   => $prefix . 'footer_title',
+      'type' => 'title',
+    ),
+    array(
+      'name' => __( 'Email address', 'IGV' ),
+      'desc' => __( '', 'IGV' ),
+      'id'   => $prefix . 'email_address',
+      'type' => 'text_email',
+    ),
+    array(
+      'name' => __( 'Phone number', 'IGV' ),
+      'desc' => __( '', 'IGV' ),
+      'id'   => $prefix . 'phone_number',
+      'type' => 'text',
+    ),
+    array(
+      'name' => __( 'Office address', 'IGV' ),
+      'desc' => __( '', 'IGV' ),
+      'id'   => $prefix . 'office_address',
+      'type' => 'textarea_small',
+    ),
+
     array(
       'name' => __( 'Social Media', 'cmb2' ),
       'desc' => __( 'urls and accounts for different social media platforms. For use in menus and metadata', 'cmb2' ),
