@@ -35,7 +35,7 @@ $metabox = array(
       'name' => __( 'Office address', 'IGV' ),
       'desc' => __( '', 'IGV' ),
       'id'   => $prefix . 'office_address',
-      'type' => 'text',
+      'type' => 'textarea_small',
     ),
 
     array(
