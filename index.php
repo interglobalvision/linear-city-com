@@ -5,7 +5,7 @@ get_header();
 <main id="main-content">
   <section id="posts">
     <div class="container">
-      <div class="grid-row">
+      <div class="grid-row margin-bottom-basic">
 
 <?php
 if( have_posts() ) {
@@ -15,7 +15,7 @@ if( have_posts() ) {
 
         <article <?php post_class('grid-item item-s-12'); ?> id="post-<?php the_ID(); ?>">
 
-          <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+          <a href="<?php the_permalink() ?>"><h2><?php the_title(); ?></h2></a>
 
           <?php the_content(); ?>
 
