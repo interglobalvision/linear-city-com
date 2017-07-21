@@ -48,6 +48,12 @@ function igv_cmb_metaboxes() {
   ) );
 
   $cmb_property->add_field( array(
+    'name'       => esc_html__( 'Address', 'cmb2' ),
+    'id'         => $prefix . 'property_address',
+    'type'       => 'text',
+  ) );
+
+  $cmb_property->add_field( array(
     'name'       => esc_html__( 'Summary', 'cmb2' ),
     'id'         => $prefix . 'property_summary',
     'type'       => 'textarea_small',
