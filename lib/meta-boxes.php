@@ -139,6 +139,59 @@ function igv_cmb_metaboxes() {
     'id'         => $prefix . 'what_we_do_home_summary',
     'type'       => 'textarea_small',
   ) );
+
+  // FILMING PAGE METABOXES
+  $filming_page = get_page_by_path('filming');
+
+  if (!empty($filming_page) ) {
+    $cmb_filming = new_cmb2_box( array(
+      'id'            => $prefix . 'filming_metabox',
+      'title'         => esc_html__( 'Homepage options', 'cmb2' ),
+      'object_types'  => array( 'page', ), // Post type
+      'show_on'      => array( 'key' => 'id', 'value' => array($filming_page->ID) ),
+    ) );
+  }
+
+  $cmb_filming->add_field( array(
+    'name'       => esc_html__( 'Homepage Summary', 'cmb2' ),
+    'id'         => $prefix . 'filming_home_summary',
+    'type'       => 'textarea_small',
+  ) );
+
+  // WHAT WE DO PAGE METABOXES
+  $what_we_do_page = get_page_by_path('what-we-do');
+
+  if (!empty($what_we_do_page) ) {
+    $cmb_what_we_do = new_cmb2_box( array(
+      'id'            => $prefix . 'what_we_do_metabox',
+      'title'         => esc_html__( 'Homepage options', 'cmb2' ),
+      'object_types'  => array( 'page', ), // Post type
+      'show_on'      => array( 'key' => 'id', 'value' => array($what_we_do_page->ID) ),
+    ) );
+  }
+
+  $cmb_what_we_do->add_field( array(
+    'name'       => esc_html__( 'Homepage Summary', 'cmb2' ),
+    'id'         => $prefix . 'what_we_do_home_summary',
+    'type'       => 'textarea_small',
+  ) );
+  // WHAT WE DO PAGE METABOXES
+  $what_we_do_page = get_page_by_path('what-we-do');
+
+  if (!empty($what_we_do_page) ) {
+    $cmb_what_we_do = new_cmb2_box( array(
+      'id'            => $prefix . 'what_we_do_metabox',
+      'title'         => esc_html__( 'Homepage options', 'cmb2' ),
+      'object_types'  => array( 'page', ), // Post type
+      'show_on'      => array( 'key' => 'id', 'value' => array($what_we_do_page->ID) ),
+    ) );
+  }
+
+  $cmb_what_we_do->add_field( array(
+    'name'       => esc_html__( 'Homepage Summary', 'cmb2' ),
+    'id'         => $prefix . 'what_we_do_home_summary',
+    'type'       => 'textarea_small',
+  ) );
 }
 
 // Returns an array of quote posts
