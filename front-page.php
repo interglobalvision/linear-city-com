@@ -14,9 +14,6 @@ get_header();
 
   <?php get_template_part('partials/home-filming'); ?>
 
-
-  <?php get_template_part('partials/pagination'); ?>
-
 </main>
 
 <?php
