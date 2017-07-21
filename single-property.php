@@ -17,7 +17,7 @@ if( have_posts() ) {
     $address = get_post_meta($post->ID, '_igv_property_address', true);
     $summary = get_post_meta($post->ID, '_igv_property_summary', true);
     $gallery = get_post_meta($post->ID, '_igv_property_gallery', true);
-    $bottom = get_post_meta($post->ID, '_igv_property_bottom_image', true);
+    $bottom_id = get_post_meta($post->ID, '_igv_property_bottom_image_id', true);
 ?>
 
         <div class="splash-with-image grid-row margin-bottom-basic align-items-end justify-end" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
@@ -67,12 +67,11 @@ if( have_posts() ) {
           </div>
 
 <?php
-    if (!empty($bottom)) {
-      $id = get_image_id_from_url($bottom);
+    if (!empty($bottom_id)) {
 ?>
 
           <div class="grid-item item-s-12 item-m-8 offset-m-2 text-align-center margin-bottom-basic">
-            <?php echo wp_get_attachment_image($id, 'item-m-8'); ?>
+            <?php echo wp_get_attachment_image( $bottom_id, 'item-m-8'); ?>
           </div>
 
 <?php
