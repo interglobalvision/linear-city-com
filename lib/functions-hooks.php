@@ -10,9 +10,9 @@ function remove_default_post_type() {
 }
 
 // Redirect all press_quotes singles to /press
-add_action( 'template_redirect', 'single_press_quotes_redirect' );
+add_action( 'template_redirect', 'single_post_types_redirect' );
 
-function single_press_quotes_redirect() {
+function single_post_types_redirect() {
 
   $queried_post_type = get_query_var('post_type');
 
