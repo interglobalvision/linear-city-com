@@ -5,10 +5,12 @@ get_header();
 <main id="main-content">
   <section id="posts">
     <div class="container">
-      <article id="post-<?php the_ID(); ?>">
 
 <?php
 if( have_posts() ) {
+?>
+      <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<?php
   while( have_posts() ) {
     the_post();
 
@@ -16,11 +18,9 @@ if( have_posts() ) {
     $summary = get_post_meta($post->ID, '_igv_property_summary', true);
     $gallery = get_post_meta($post->ID, '_igv_property_gallery', true);
     $bottom = get_post_meta($post->ID, '_igv_property_bottom_image', true);
-
-    //pr ($gallery); die;
 ?>
 
-        <div <?php post_class('splash-with-image grid-row margin-bottom-basic align-items-end justify-end'); ?> style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
+        <div class="splash-with-image grid-row margin-bottom-basic align-items-end justify-end" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
           <div class="grid-item">
 
             <h2><?php the_title(); ?></h2>
@@ -83,13 +83,19 @@ if( have_posts() ) {
 
 <?php
   }
+?>
+        </article>
+<?php
 } else {
 ?>
-        <div class="u-alert grid-item item-s-12"><?php _e('404 Not Found'); ?></div>
+        <div class="u-alert grid-row">
+          <div class="grid-item item-s-12">
+            <?php _e('Sorry, this property was not found.'); ?>
+          </div>
+        </div>
 <?php
 } ?>
 
-      </article>
     </div>
   </section>
 </main>
