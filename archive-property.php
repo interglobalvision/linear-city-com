@@ -7,6 +7,8 @@ get_header();
     <div class="container">
       <div class="grid-row margin-bottom-basic">
 
+        <h1 class="highlight-hero">Our Properties</h1>
+
 <?php
 if( have_posts() ) {
   while( have_posts() ) {
