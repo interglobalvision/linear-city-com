@@ -10,6 +10,8 @@ get_header();
 
   <?php get_template_part('partials/home-what-we-do'); ?>
 
+  <?php get_template_part('partials/home-press-quotes'); ?>
+
   <?php get_template_part('partials/home-filming'); ?>
 
 

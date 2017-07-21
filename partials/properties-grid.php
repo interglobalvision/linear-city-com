@@ -40,8 +40,6 @@ if( $properties->have_posts() ) {
             <h3><?php echo the_title(); ?></h3>
           </a>
 
-          <?php the_content(); ?>
-
         </article>
 <?php
     // Check if should close a new `grid-row`
