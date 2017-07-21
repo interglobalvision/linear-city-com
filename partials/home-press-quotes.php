@@ -53,7 +53,7 @@ if (!empty($home)) {
     </div>
 
     <div class="grid-row">
-      <div class="grid-item item-s-3"><a href="#">Press archive</a></div>
+    <div class="grid-item item-s-3"><a href="<?php echo get_post_type_archive_link('press_quote') ?>">Press archive</a></div>
     </div>
   </section>
 <?php
