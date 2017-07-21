@@ -18,10 +18,6 @@
       </div>
       <div class="grid-item item-m-7">
         <?php echo apply_filters('the_content', $summary); ?>
-      </div>
-    </div>
-    <div class="grid-row justify-end">
-      <div class="grid-item item-m-4 text-align-center">
         <a href="<?php echo $permalink; ?>">Learn more</a>
       </div>
     </div>

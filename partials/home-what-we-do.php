@@ -15,14 +15,10 @@
     <div class="grid-row">
       <div class="grid-item item-m-7">
         <?php echo apply_filters('the_content', $summary); ?>
+        <a href="<?php echo $permalink; ?>">Learn more</a>
       </div>
       <div class="grid-item item-m-5">
         <?php echo $thumbnail; ?>
-      </div>
-    </div>
-    <div class="grid-row justify-center">
-      <div class="grid-item item-m-4 text-align-center">
-        <a href="<?php echo $permalink; ?>">Learn more</a>
       </div>
     </div>
   </section>
