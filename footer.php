@@ -1,9 +1,9 @@
   <footer id="footer" class="container">
     <div class="grid-row margin-bottom-mid">
-      <div class="grid-item item-s-10 offset-s-1">
+      <div class="grid-item item-s-4">
         <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
       </div>
-      <div class="grid-item item-s-12">
+      <div class="grid-item item-s-8">
         <ul class="u-inline-list text-align-right">
           <li><a href="<?php echo home_url('property'); ?>">Properties</a></li>
           <li><a href="<?php echo home_url('what-we-do'); ?>">What We Do</a></li>
@@ -18,7 +18,7 @@
   $footer_address = IGV_get_option('_igv_site_options', '_igv_office_address');
 ?>
     <div class="grid-row">
-      <div class="grid-item item-s-8 offset-s-1">
+      <div class="grid-item item-s-5">
         <?php
           if ($footer_email) {
         ?>
@@ -28,7 +28,7 @@
           }
         ?>
       </div>
-      <div class="grid-item item-s-6">
+      <div class="grid-item item-s-3">
         <?php
           if ($footer_phone) {
         ?>
@@ -38,7 +38,7 @@
           }
         ?>
       </div>
-      <div class="grid-item item-s-8">
+      <div class="grid-item item-s-4">
         <?php
           if ($footer_address) {
         ?>
