@@ -8,9 +8,10 @@ get_header();
 
 <?php
 if( have_posts() ) {
+  $i = 0;
+
   while( have_posts() ) {
     the_post();
-
     $quote = get_post_meta($post->ID, '_igv_quote_text', true);
     $link = get_post_meta($post->ID, '_igv_quote_link', true);
 
@@ -21,6 +22,10 @@ if( have_posts() ) {
     }
 
     if (has_post_thumbnail()) {
+
+      if ($i > 0) {
+        // Diagonal divider goes here //
+      }
 ?>
     <article <?php post_class('grid-row margin-bottom-basic'); ?> id="post-<?php the_ID(); ?>">
       <div class="grid-item item-s-4">
@@ -31,6 +36,9 @@ if( have_posts() ) {
       </div>
     </article>
 <?php
+
+    // Diagonal divider goes here //
+
     } else {
 ?>
     <article <?php post_class('grid-row margin-bottom-basic'); ?> id="post-<?php the_ID(); ?>">
@@ -41,6 +49,7 @@ if( have_posts() ) {
 <?php
     }
 
+    $i++;
   }
 } else {
 ?>
