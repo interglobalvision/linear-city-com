@@ -29,7 +29,7 @@ if( have_posts() ) {
 ?>
     <article <?php post_class('grid-row margin-bottom-basic'); ?> id="post-<?php the_ID(); ?>">
       <div class="grid-item item-s-4">
-        <?php the_post_thumbnail('col-4'); ?>
+        <?php the_post_thumbnail('item-l-4'); ?>
       </div>
       <div class="grid-item item-s-8">
         <span class="font-size-extra"><?php echo $quote; ?></span><span class="font-size-large"> - <?php echo $title; ?></span>
