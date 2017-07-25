@@ -132,13 +132,14 @@ function igv_cmb_metaboxes() {
       'object_types'  => array( 'page', ), // Post type
       'show_on'      => array( 'key' => 'id', 'value' => array($what_we_do_page->ID) ),
     ) );
-  }
 
-  $cmb_what_we_do->add_field( array(
-    'name'       => esc_html__( 'Homepage Summary', 'cmb2' ),
-    'id'         => $prefix . 'what_we_do_home_summary',
-    'type'       => 'textarea_small',
-  ) );
+    $cmb_what_we_do->add_field( array(
+      'name'       => esc_html__( 'Homepage Summary', 'cmb2' ),
+      'id'         => $prefix . 'what_we_do_home_summary',
+      'type'       => 'textarea_small',
+    ) );
+
+  }
 
   // FILMING PAGE METABOXES
   $filming_page = get_page_by_path('filming');
@@ -150,13 +151,13 @@ function igv_cmb_metaboxes() {
       'object_types'  => array( 'page', ), // Post type
       'show_on'      => array( 'key' => 'id', 'value' => array($filming_page->ID) ),
     ) );
-  }
 
-  $cmb_filming->add_field( array(
-    'name'       => esc_html__( 'Homepage Summary', 'cmb2' ),
-    'id'         => $prefix . 'filming_home_summary',
-    'type'       => 'textarea_small',
-  ) );
+    $cmb_filming->add_field( array(
+      'name'       => esc_html__( 'Homepage Summary', 'cmb2' ),
+      'id'         => $prefix . 'filming_home_summary',
+      'type'       => 'textarea_small',
+    ) );
+  }
 
 }
 
