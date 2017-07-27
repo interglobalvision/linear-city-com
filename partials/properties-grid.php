@@ -1,5 +1,5 @@
 <?php
-$properties = new WP_QUERY( array(
+$properties = new WP_Query( array(
   'post_type' => 'property',
   'nopaging' => true,
 ));
