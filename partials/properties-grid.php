@@ -53,8 +53,5 @@ if( $properties->have_posts() ) {
     </div> <!-- Close container -->
   </section>
 <?php
-} else {
+}
 ?>
-        <article class="u-alert grid-item item-s-12"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
-<?php
-} ?>
