@@ -29,3 +29,24 @@ function single_post_types_redirect() {
   }
 }
 
+// Programatically create Home, What We Do and Filming pages
+function create_custom_pages() {
+  $custom_pages = array(
+    'home' => 'Home',
+    'what-we-do' => 'What We Do',
+    'filming' => 'Filming',
+  );
+
+  foreach($custom_pages as $page_name => $page_title) {
+    if( empty(get_page_by_path($page_name)) ) {
+      wp_insert_post( array(
+        'post_type' => 'page',
+        'post_title' => $page_title,
+        'post_name' => $page_name,
+        'post_status' => 'publish'
+      ));
+    }
+  }
+}
+add_filter( 'after_setup_theme', 'create_custom_pages' );
+

@@ -90,5 +90,97 @@ function igv_cmb_metaboxes() {
     'type'       => 'text_url',
   ) );
 
+  // HOME PAGE METABOXES
+  $home_page = get_page_by_path('home');
+
+  if (!empty($home_page) ) {
+    $cmb_home = new_cmb2_box( array(
+      'id'            => $prefix . 'home_metabox',
+      'title'         => esc_html__( 'Options', 'cmb2' ),
+      'object_types'  => array( 'page', ), // Post type
+      'show_on'      => array( 'key' => 'id', 'value' => array($home_page->ID) ),
+    ) );
+
+    $cmb_home->add_field( array(
+      'name'       => esc_html__( 'Splash Text', 'cmb2' ),
+      'id'         => $prefix . 'splash_text',
+      'type'       => 'textarea_small',
+    ) );
+
+    $cmb_home->add_field( array(
+      'name'       => esc_html__( 'Splash Image', 'cmb2' ),
+      'id'         => $prefix . 'splash_image',
+      'type'       => 'file',
+    ) );
+
+    // Get quote posts, to be used as slect field values
+    $press_quote_posts = get_posts_as_options('press_quote');
+
+    // Generate this field 3 times
+    for($i = 1; $i <= 3; $i++) {
+      $cmb_home->add_field( array(
+        'name'       => esc_html__( 'Press Quote #' . $i, 'cmb2' ),
+        'id'         => $prefix . 'home_press_quote_' . $i,
+        'type'       => 'select',
+        'show_option_none' => true,
+        'options' => $press_quote_posts,
+      ) );
+    }
+  }
+
+  // WHAT WE DO PAGE METABOXES
+  $what_we_do_page = get_page_by_path('what-we-do');
+
+  if (!empty($what_we_do_page) ) {
+    $cmb_what_we_do = new_cmb2_box( array(
+      'id'            => $prefix . 'what_we_do_metabox',
+      'title'         => esc_html__( 'Homepage options', 'cmb2' ),
+      'object_types'  => array( 'page', ), // Post type
+      'show_on'      => array( 'key' => 'id', 'value' => array($what_we_do_page->ID) ),
+    ) );
+
+    $cmb_what_we_do->add_field( array(
+      'name'       => esc_html__( 'Homepage Summary', 'cmb2' ),
+      'id'         => $prefix . 'what_we_do_home_summary',
+      'type'       => 'textarea_small',
+    ) );
+
+  }
+
+  // FILMING PAGE METABOXES
+  $filming_page = get_page_by_path('filming');
+
+  if (!empty($filming_page) ) {
+    $cmb_filming = new_cmb2_box( array(
+      'id'            => $prefix . 'filming_metabox',
+      'title'         => esc_html__( 'Homepage options', 'cmb2' ),
+      'object_types'  => array( 'page', ), // Post type
+      'show_on'      => array( 'key' => 'id', 'value' => array($filming_page->ID) ),
+    ) );
+
+    $cmb_filming->add_field( array(
+      'name'       => esc_html__( 'Homepage Summary', 'cmb2' ),
+      'id'         => $prefix . 'filming_home_summary',
+      'type'       => 'textarea_small',
+    ) );
+  }
+
+}
+
+// Returns an array of quote posts
+function get_posts_as_options($post_type) {
+  $posts = get_posts( array(
+    'post_type' => $post_type,
+    'nopaging' => true,
+  ));
+
+  $posts_as_options = array();
+
+  for($i = 0; $i < count($posts); $i++) {
+    $post = $posts[$i];
+    $posts_as_options[$post->ID] = $post->post_title;
+  }
+
+  return $posts_as_options;
 }
 ?>
