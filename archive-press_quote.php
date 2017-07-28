@@ -8,10 +8,11 @@ get_header();
 
 <?php
 if( have_posts() ) {
-  $i = 0;
-
   while( have_posts() ) {
     the_post();
+
+    $index = $wp_query->current_post;
+
     $quote = get_post_meta($post->ID, '_igv_quote_text', true);
     $link = get_post_meta($post->ID, '_igv_quote_link', true);
     $publication = get_post_meta($post->ID, '_igv_quote_publication', true);
@@ -22,7 +23,7 @@ if( have_posts() ) {
 
     if (has_post_thumbnail()) {
 
-      if ($i > 0) {
+      if ($index > 0) {
         // Diagonal divider goes here //
       }
 ?>
@@ -48,7 +49,6 @@ if( have_posts() ) {
 <?php
     }
 
-    $i++;
   }
 } else {
 ?>
