@@ -14,11 +14,10 @@ if( have_posts() ) {
     the_post();
     $quote = get_post_meta($post->ID, '_igv_quote_text', true);
     $link = get_post_meta($post->ID, '_igv_quote_link', true);
-
-    $title = get_the_title();
+    $publication = get_post_meta($post->ID, '_igv_quote_publication', true);
 
     if ($link) {
-      $title = '<a href="' . $link . '">' . $title . '</a>';
+      $publication = '<a href="' . $link . '">' . $publication . '</a>';
     }
 
     if (has_post_thumbnail()) {
@@ -32,7 +31,7 @@ if( have_posts() ) {
         <?php the_post_thumbnail('item-l-4'); ?>
       </div>
       <div class="grid-item item-s-8">
-        <span class="font-size-extra"><?php echo $quote; ?></span><span class="font-size-large"> - <?php echo $title; ?></span>
+        <span class="font-size-extra"><?php echo $quote; ?></span><span class="font-size-large"> - <?php echo $publication; ?></span>
       </div>
     </article>
 <?php
@@ -43,7 +42,7 @@ if( have_posts() ) {
 ?>
     <article <?php post_class('grid-row margin-bottom-basic'); ?> id="post-<?php the_ID(); ?>">
       <div class="grid-item item-s-12">
-        <span class="font-size-extra"><?php echo $quote; ?></span><span class="font-size-large"> - <?php echo $title; ?></span>
+        <span class="font-size-extra"><?php echo $quote; ?></span><span class="font-size-large"> - <?php echo $publication; ?></span>
       </div>
     </article>
 <?php
