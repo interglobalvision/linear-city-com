@@ -32,11 +32,17 @@ if( have_posts() ) {
             </div>
           </section>
 
+<?php
+    if (has_post_thumbnail()) {
+?>
+
           <section id="what-we-do-splash" class="splash-with-image">
 
           </section>
 
 <?php
+    }
+
     if (!empty($bios)) {
 ?>
           <section id="what-we-do-bios">
@@ -70,87 +76,24 @@ if( have_posts() ) {
 
     if (!empty($realestate_text)) {
       //diagonal_divider();
-?>
-          <section id="what-we-do-realestate">
-            <div class="container">
-              <div class="grid-row">
-                <div class="grid-item item-s-12 item-m-6">
-                  <?php echo apply_filters('the_content', $realestate_text); ?>
-                </div>
 
-                <div class="grid-item item-s-12 item-m-6">
-                  <div class="highlight-section-title">
-                    <h3 class="font-heavy">Real Estate</h3>
-                  </div>
-                  <?php
-                    if (!empty($realestate_images)) {
-                      foreach ($realestate_images as $image_id => $image_url) {
-                        echo wp_get_attachment_image($image_id, 'item-l-6');
-                      }
-                    }
-                  ?>
-                </div>
-              </div>
-            </div>
-          </section>
-<?php
-      }
+      what_we_do_section('realestate', 'Real Estate', $realestate_text, $realestate_images);
 
-      if (!empty($community_text)) {
-        //diagonal_divider();
-?>
-          <section id="what-we-do-community">
-            <div class="container">
-              <div class="grid-row">
-                <div class="grid-item item-s-12 item-m-6">
-                  <?php echo apply_filters('the_content', $community_text); ?>
-                </div>
+    }
 
-                <div class="grid-item item-s-12 item-m-6">
-                  <div class="highlight-section-title">
-                    <h3 class="font-heavy">Community</h3>
-                  </div>
-                  <?php
-                    if (!empty($community_images)) {
-                      foreach ($community_images as $image_id => $image_url) {
-                        echo wp_get_attachment_image($image_id, 'item-l-6');
-                      }
-                    }
-                  ?>
-                </div>
-              </div>
-            </div>
-          </section>
-<?php
-      }
+    if (!empty($community_text)) {
+      //diagonal_divider();
 
-      if (!empty($philanthropy_text)) {
-        //diagonal_divider();
-?>
-          <section id="what-we-do-philanthropy">
-            <div class="container">
-              <div class="grid-row">
-                <div class="grid-item item-s-12 item-m-6">
-                  <?php echo apply_filters('the_content', $philanthropy_text); ?>
-                </div>
+      what_we_do_section('community', 'Community', $community_text, $community_images);
 
-                <div class="grid-item item-s-12 item-m-6">
-                  <div class="highlight-section-title">
-                    <h3 class="font-heavy">Philanthropy</h3>
-                  </div>
-                  <?php
-                    if (!empty($philanthropy_images)) {
-                      foreach ($philanthropy_images as $image_id => $image_url) {
-                        echo wp_get_attachment_image($image_id, 'item-l-6');
-                      }
-                    }
-                  ?>
-                </div>
-              </div>
-            </div>
-          </section>
-<?php
-      }
+    }
+
+    if (!empty($philanthropy_text)) {
+      //diagonal_divider();
+
+      what_we_do_section('philanthropy', 'Philanthropy', $philanthropy_text, $philanthropy_images);
+
+    }
 ?>
 
 
