@@ -25,7 +25,7 @@ if( have_posts() ) {
 
             <h2><?php the_title(); ?></h2>
 
-            <?php echo !empty($address) ? $address : ''; ?>
+            <span class="font-heavy"><?php echo !empty($address) ? $address : ''; ?></span>
 
           </div>
         </div>
@@ -35,7 +35,7 @@ if( have_posts() ) {
 <?php
     if (!empty($summary)) {
 ?>
-          <div class="highlight-hero grid-item item-s-12 margin-bottom-basic">
+          <div class="highlight-hero grid-item item-s-12 margin-bottom-basic font-heavy">
             <?php echo $summary; ?>
           </div>
 <?php
