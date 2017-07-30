@@ -19,6 +19,8 @@ if( have_posts() ) {
 
     $philanthropy_text = get_post_meta($post->ID, '_igv_philanthropy_text', true);
     $philanthropy_images = get_post_meta($post->ID, '_igv_philanthropy_images', true);
+
+
 ?>
 
         <article <?php post_class('grid-item item-s-12'); ?> id="post-<?php the_ID(); ?>">
@@ -36,7 +38,7 @@ if( have_posts() ) {
     if (has_post_thumbnail()) {
 ?>
 
-          <section id="what-we-do-splash" class="splash-with-image">
+          <section id="what-we-do-splash" class="splash-with-image" style="background-image: url(<?php echo get_the_post_thumbnail_url($post->ID, 'splash'); ?>)">
 
           </section>
 
