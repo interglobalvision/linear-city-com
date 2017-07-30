@@ -30,7 +30,7 @@ if (!empty($home)) {
   <section id="press-home">
     <div class="grid-row">
       <div class="grid-item item-m-5">
-        <h2>Press</h2>
+        <h2 class="font-heavy">Press</h2>
       </div>
     </div>
     <div class="grid-row">
