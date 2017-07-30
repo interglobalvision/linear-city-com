@@ -7,7 +7,7 @@ get_header();
     <div class="container">
       <div class="grid-row margin-bottom-basic">
 
-        <h1 class="highlight-hero grid-item item-s-12">Our Properties</h1>
+        <h1 class="highlight-hero grid-item item-s-12 font-heavy">Our Properties</h1>
 
 <?php
 if( have_posts() ) {
@@ -22,7 +22,7 @@ if( have_posts() ) {
           <a href="<?php the_permalink() ?>">
             <?php the_post_thumbnail('item-m-6', array('class'=>'margin-bottom-small')); ?>
 
-            <h2><?php the_title(); ?></h2>
+            <h2 class="font-heavy"><?php the_title(); ?></h2>
 
             <?php echo !empty($address) ? $address : ''; ?>
           </a>
