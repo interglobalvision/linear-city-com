@@ -24,7 +24,7 @@ if( have_posts() ) {
     if (has_post_thumbnail()) {
 
       if ($index > 0) {
-        // Diagonal divider goes here //
+        diagonal_divider();
       }
 ?>
     <article <?php post_class('grid-row margin-bottom-basic'); ?> id="post-<?php the_ID(); ?>">
@@ -37,7 +37,7 @@ if( have_posts() ) {
     </article>
 <?php
 
-    // Diagonal divider goes here //
+    diagonal_divider();
 
     } else {
 ?>
