@@ -45,7 +45,7 @@ if (!empty($home)) {
 ?>
       <div class="grid-item item-m-4">
         <div><?php echo $quote; ?></div>
-        <h2>- <a href="<? echo $quote_link; ?>"><?php the_title(); ?></a></h2>
+        <h2 class="font-bolder">- <a href="<? echo $quote_link; ?>"><?php the_title(); ?></a></h2>
       </div>
 <?php
     }
