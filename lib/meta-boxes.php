@@ -151,6 +151,104 @@ function igv_cmb_metaboxes() {
       'type'       => 'textarea_small',
     ) );
 
+    // BIO GROUP
+    $bios_group_id = $cmb_what_we_do->add_field( array(
+  		'id'          => $prefix . 'bios_group',
+  		'type'        => 'group',
+      'description' => esc_html__( 'Team Biographies:', 'cmb2' ),
+  		'options'     => array(
+  			'group_title'   => esc_html__( 'Bio {#}', 'cmb2' ), // {#} gets replaced by row number
+  			'add_button'    => esc_html__( 'Add Another Bio', 'cmb2' ),
+  			'remove_button' => esc_html__( 'Remove Bio', 'cmb2' ),
+  			'sortable'      => true, // beta
+  			// 'closed'     => true, // true to have the groups closed by default
+  		),
+  	) );
+
+    $cmb_what_we_do->add_group_field( $bios_group_id, array(
+  		'name'       => esc_html__( 'Name', 'cmb2' ),
+  		'id'         => 'name',
+  		'type'       => 'text',
+  	) );
+
+    $cmb_what_we_do->add_group_field( $bios_group_id, array(
+  		'name'       => esc_html__( 'Position', 'cmb2' ),
+  		'id'         => 'position',
+  		'type'       => 'text',
+  	) );
+
+    $cmb_what_we_do->add_group_field( $bios_group_id, array(
+  		'name' => esc_html__( 'Portrait', 'cmb2' ),
+  		'id'   => 'image',
+  		'type' => 'file',
+  	) );
+
+    $cmb_what_we_do->add_group_field( $bios_group_id, array(
+  		'name'       => esc_html__( 'Bio', 'cmb2' ),
+  		'id'         => 'bio',
+  		'type'       => 'textarea',
+  	) );
+
+    // REAL ESTATE
+    $cmb_what_we_do->add_field( array(
+  		'name'         => esc_html__( 'Real Estate', 'cmb2' ),
+  		'id'           => $prefix . 'realestate_title',
+  		'type'         => 'title',
+  	) );
+
+    $cmb_what_we_do->add_field( array(
+  		'name'         => esc_html__( 'Real Estate Text', 'cmb2' ),
+  		'id'           => $prefix . 'realestate_text',
+  		'type'         => 'textarea',
+  	) );
+
+    $cmb_what_we_do->add_field( array(
+  		'name'         => esc_html__( 'Real Estate Images', 'cmb2' ),
+  		'id'           => $prefix . 'realestate_images',
+  		'type'         => 'file_list',
+  		'preview_size' => array( 150, 150 ), // Default: array( 50, 50 )
+  	) );
+
+    // COMMUNITY
+    $cmb_what_we_do->add_field( array(
+  		'name'         => esc_html__( 'Community', 'cmb2' ),
+  		'id'           => $prefix . 'community_title',
+  		'type'         => 'title',
+  	) );
+
+    $cmb_what_we_do->add_field( array(
+  		'name'         => esc_html__( 'Community Text', 'cmb2' ),
+  		'id'           => $prefix . 'community_text',
+  		'type'         => 'textarea',
+  	) );
+
+    $cmb_what_we_do->add_field( array(
+  		'name'         => esc_html__( 'Community Images', 'cmb2' ),
+  		'id'           => $prefix . 'community_images',
+  		'type'         => 'file_list',
+  		'preview_size' => array( 150, 150 ), // Default: array( 50, 50 )
+  	) );
+
+    // PHILANTHROPY
+    $cmb_what_we_do->add_field( array(
+  		'name'         => esc_html__( 'Philanthropy', 'cmb2' ),
+  		'id'           => $prefix . 'philanthropy_title',
+  		'type'         => 'title',
+  	) );
+
+    $cmb_what_we_do->add_field( array(
+  		'name'         => esc_html__( 'Philanthropy Text', 'cmb2' ),
+  		'id'           => $prefix . 'philanthropy_text',
+  		'type'         => 'textarea',
+  	) );
+
+    $cmb_what_we_do->add_field( array(
+  		'name'         => esc_html__( 'Philanthropy Images', 'cmb2' ),
+  		'id'           => $prefix . 'philanthropy_images',
+  		'type'         => 'file_list',
+  		'preview_size' => array( 150, 150 ), // Default: array( 50, 50 )
+  	) );
+
   }
 
   // FILMING PAGE METABOXES
