@@ -28,12 +28,13 @@ if (!empty($home)) {
 ?>
 
   <section id="press-home">
-    <div class="grid-row">
-      <div class="grid-item item-m-5">
-        <h2 class="font-heavy">Press</h2>
+    <div class="container">
+      <div class="grid-row">
+        <div class="grid-item item-m-5">
+          <h2 class="font-heavy">Press</h2>
+        </div>
       </div>
-    </div>
-    <div class="grid-row">
+      <div class="grid-row">
 
 <?php
     while ($press_quotes->have_posts()) {
@@ -43,17 +44,18 @@ if (!empty($home)) {
       $quote_link = get_post_meta($post->ID,'_igv_quote_link', true);
 
 ?>
-      <div class="grid-item item-m-4">
-        <div><?php echo $quote; ?></div>
-        <h2 class="font-bolder">- <a href="<? echo $quote_link; ?>"><?php the_title(); ?></a></h2>
-      </div>
+        <div class="grid-item item-m-4">
+          <div><?php echo $quote; ?></div>
+          <h2 class="font-bolder">- <a href="<? echo $quote_link; ?>"><?php the_title(); ?></a></h2>
+        </div>
 <?php
     }
 ?>
-    </div>
+      </div>
 
-    <div class="grid-row">
-    <div class="grid-item item-s-3"><a href="<?php echo get_post_type_archive_link('press_quote') ?>">Press archive</a></div>
+      <div class="grid-row">
+      <div class="grid-item item-s-3"><a href="<?php echo get_post_type_archive_link('press_quote') ?>">Press archive</a></div>
+      </div>
     </div>
   </section>
 <?php

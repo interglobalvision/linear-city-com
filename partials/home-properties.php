@@ -7,13 +7,13 @@ $properties = new WP_Query( array(
 if( $properties->have_posts() ) {
 ?>
   <section id="our-properties">
-    <div class="grid-row justify-center">
-      <div class="grid-item item-s-4 text-align-center">
-        <h2 class="font-heavy">Our Properties</h2>
-      </div>
-    </div>
-
     <div class="container">
+      <div class="grid-row justify-center">
+        <div class="grid-item item-s-4 text-align-center">
+          <h2 class="font-heavy">Our Properties</h2>
+        </div>
+      </div>
+
 <?php
   while( $properties->have_posts() ) {
     $properties->the_post();
