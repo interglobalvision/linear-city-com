@@ -11,7 +11,7 @@ if( function_exists( 'add_image_size' ) ) {
   add_image_size( 'item-l-4', 790, 9999, false );
   add_image_size( 'item-l-6', 930, 9999, false );
 
-  add_image_size( 'splash', 1440, 900, false );
+  add_image_size( 'splash', 1920, 9999, false );
 
   add_image_size( 'gallery', 1200, 9999, false );
 }
