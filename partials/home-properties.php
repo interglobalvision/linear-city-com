@@ -33,7 +33,7 @@ if( $properties->have_posts() ) {
 <?php
     }
 ?>
-        <article <?php post_class('grid-item item-s-12 item-m-4 text-align-center ' . $item_classes ); ?> id="post-<?php the_ID(); ?>">
+        <article <?php post_class('grid-item item-s-12 item-m-4 text-align-center margin-bottom-basic ' . $item_classes ); ?> id="post-<?php the_ID(); ?>">
 
           <a href="<?php the_permalink() ?>">
             <?php the_post_thumbnail(); ?>
