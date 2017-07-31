@@ -54,10 +54,16 @@ if( have_posts() ) {
 ?>
               <div class="grid-row">
                 <div class="grid-item item-s-12 item-m-4">
+<?php
+        if (!empty($bio['name'])) {
+?>
                   <div class="highlight-section-title">
-                    <h3 class="font-heavy"><?php echo !empty($bio['name']) ? $bio['name'] : ''; ?></h3>
+                    <h3 class="font-heavy"><?php echo $bio['name']; ?></h3>
                     <span><?php echo !empty($bio['position']) ? $bio['position'] : ''; ?></span>
                   </div>
+<?php
+        }
+?>
                   <?php
                     if (!empty($bio['image_id'])) {
                       echo wp_get_attachment_image($bio['image_id'], 'item-l-4');
