@@ -6,7 +6,7 @@ get_header();
 
   <?php get_template_part('partials/home-splash'); ?>
 
-  <?php get_template_part('partials/properties-grid'); ?>
+  <?php get_template_part('partials/home-properties'); ?>
 
   <?php render_divider(); ?>
 
