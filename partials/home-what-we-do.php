@@ -9,7 +9,7 @@
   <section id="what-we-do-home">
     <div class="grid-row">
       <div class="grid-item item-m-5">
-        <h2>What We Do</h2>
+        <h2 class="font-heavy">What We Do</h2>
       </div>
     </div>
     <div class="grid-row">
@@ -25,4 +25,3 @@
 <?php
   }
 ?>
-

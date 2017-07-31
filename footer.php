@@ -1,10 +1,10 @@
   <footer id="footer" class="container">
     <div class="grid-row margin-bottom-mid">
-      <div class="grid-item item-s-4">
-        <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+      <div class="grid-item item-s-4 font-serif">
+        <a href="<?php echo home_url(); ?>">LinearCityDevelopment</a>
       </div>
       <div class="grid-item item-s-8">
-        <ul class="u-inline-list text-align-right">
+        <ul class="u-inline-list text-align-right font-heavy">
           <li><a href="<?php echo home_url('property'); ?>">Properties</a></li>
           <li><a href="<?php echo home_url('what-we-do'); ?>">What We Do</a></li>
           <li><a href="<?php echo home_url('press'); ?>">Press</a></li>
@@ -22,7 +22,7 @@
         <?php
           if ($footer_email) {
         ?>
-        <h4>Email</h4>
+        <h4 class="font-heavy">Email</h4>
         <a href="mailto:<?php echo $footer_email; ?>" target="_blank" rel="noopener"><?php echo $footer_email; ?></a>
         <?php
           }
@@ -32,7 +32,7 @@
         <?php
           if ($footer_phone) {
         ?>
-        <h4>Phone</h4>
+        <h4 class="font-heavy">Phone</h4>
         <a href="tel:<?php echo $footer_phone; ?>"><?php echo $footer_phone; ?></a>
         <?php
           }
@@ -42,7 +42,7 @@
         <?php
           if ($footer_address) {
         ?>
-        <h4>Offices</h4>
+        <h4 class="font-heavy">Offices</h4>
         <a href="https://www.google.com/maps/search/<?php echo urlencode($footer_address); ?>/" target="_blank" rel="noopener"><?php echo apply_filters('the_content', $footer_address); ?></a>
         <?php
           }

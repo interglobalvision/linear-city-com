@@ -30,10 +30,10 @@
   <header id="header" class="container">
     <div class="grid-row margin-top-tiny margin-bottom-small">
       <div class="grid-item item-s-4">
-        <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+        <h1 class="font-serif"><a href="<?php echo home_url(); ?>">LinearCityDevelopment</a></h1>
       </div>
       <div class="grid-item item-s-8">
-        <ul class="u-inline-list text-align-right">
+        <ul class="u-inline-list text-align-right font-heavy">
           <li><a href="<?php echo home_url('property'); ?>">Properties</a></li>
           <li><a href="<?php echo home_url('what-we-do'); ?>">What We Do</a></li>
           <li><a href="<?php echo home_url('press'); ?>">Press</a></li>

@@ -9,7 +9,7 @@
   <section id="filming-home">
     <div class="grid-row">
       <div class="grid-item item-m-5">
-        <h2>Filming</h2>
+        <h2 class="font-heavy">Filming</h2>
       </div>
     </div>
     <div class="grid-row">

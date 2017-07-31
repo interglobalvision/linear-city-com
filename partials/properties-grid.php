@@ -9,7 +9,7 @@ if( $properties->have_posts() ) {
   <section id="our-properties">
     <div class="grid-row justify-center">
       <div class="grid-item item-s-4 text-align-center">
-        <h2>Our Properties</h2>
+        <h2 class="font-heavy">Our Properties</h2>
       </div>
     </div>
 
@@ -37,7 +37,7 @@ if( $properties->have_posts() ) {
 
           <a href="<?php the_permalink() ?>">
             <?php the_post_thumbnail(); ?>
-            <h3><?php echo the_title(); ?></h3>
+            <h3 class="font-heavy"><?php echo the_title(); ?></h3>
           </a>
 
         </article>
