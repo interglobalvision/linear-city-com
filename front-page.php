@@ -8,9 +8,15 @@ get_header();
 
   <?php get_template_part('partials/properties-grid'); ?>
 
+  <?php render_divider(); ?>
+
   <?php get_template_part('partials/home-what-we-do'); ?>
 
+  <?php render_divider(); ?>
+
   <?php get_template_part('partials/home-press-quotes'); ?>
+
+  <?php render_divider(); ?>
 
   <?php get_template_part('partials/home-filming'); ?>
 
