@@ -109,10 +109,6 @@ if( have_posts() ) {
 
 <?php
   }
-} else {
-?>
-        <article class="u-alert grid-item item-s-12"><?php _e('Sorry, this page does not exist :{'); ?></article>
-<?php
 } ?>
 
 </main>
