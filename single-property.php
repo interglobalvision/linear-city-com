@@ -59,7 +59,7 @@ if( have_posts() ) {
       }
     }
 
-    diagonal_divider();
+    render_divider();
 ?>
 
           <div class="grid-item item-s-12 margin-bottom-basic">
@@ -69,7 +69,7 @@ if( have_posts() ) {
 <?php
     if (!empty($bottom_id)) {
 
-      diagonal_divider();
+      render_divider();
 ?>
 
           <div class="grid-item item-s-12 item-m-8 offset-m-2 text-align-center margin-bottom-basic">
