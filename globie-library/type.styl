@@ -63,11 +63,15 @@ a.link-underline,
 p a
   text-decoration: underline
 
-font-sizes($size-basic = 15px, $size-extra = false, $size-large = false, $size-mid = false, $size-small = false, $size-tiny = false, $size-micro = false)
+font-sizes($size-basic = 15px, $size-giant = false, $size-extra = false, $size-large = false, $size-mid = false, $size-small = false, $size-tiny = false, $size-micro = false)
 
   if ($size-basic)
     html, .font-size-basic
       font-size: $size-basic
+
+  if ($size-giant)
+    .font-size-giant
+      font-size: $size-giant
 
   if ($size-extra)
     .font-size-extra
