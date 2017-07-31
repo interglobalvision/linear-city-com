@@ -32,7 +32,7 @@ if( have_posts() ) {
         <?php the_post_thumbnail('item-l-4'); ?>
       </div>
       <div class="grid-item item-s-8">
-        <span class="font-size-extra"><?php echo $quote; ?></span><span class="font-size-large"> - <?php echo $publication; ?></span>
+        <span class="font-size-extra"><?php echo $quote; ?></span><span class="font-size-large font-bolder"> - <?php echo $publication; ?></span>
       </div>
     </article>
 <?php
@@ -43,7 +43,7 @@ if( have_posts() ) {
 ?>
     <article <?php post_class('grid-row margin-bottom-basic'); ?> id="post-<?php the_ID(); ?>">
       <div class="grid-item item-s-12">
-        <span class="font-size-extra"><?php echo $quote; ?></span><span class="font-size-large"> - <?php echo $publication; ?></span>
+        <span class="font-size-extra"><?php echo $quote; ?></span><span class="font-size-large font-bolder"> - <?php echo $publication; ?></span>
       </div>
     </article>
 <?php
