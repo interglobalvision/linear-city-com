@@ -2,7 +2,7 @@
 
 // Custom functions (like special queries, etc)
 
-function what_we_do_section($id, $title, $text, $images) {
+function render_what_we_do_section($id, $title, $text, $images) {
 
 ?>
 

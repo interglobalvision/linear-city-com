@@ -23,7 +23,7 @@ if( have_posts() ) {
 
 ?>
 
-        <article <?php post_class('grid-item item-s-12'); ?> id="post-<?php the_ID(); ?>">
+        <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
           <section id="what-we-do-hero">
             <div class="container">
               <div class="grid-row">
@@ -79,21 +79,21 @@ if( have_posts() ) {
     if (!empty($realestate_text)) {
       //diagonal_divider();
 
-      what_we_do_section('realestate', 'Real Estate', $realestate_text, $realestate_images);
+      render_what_we_do_section('realestate', 'Real Estate', $realestate_text, $realestate_images);
 
     }
 
     if (!empty($community_text)) {
       //diagonal_divider();
 
-      what_we_do_section('community', 'Community', $community_text, $community_images);
+      render_what_we_do_section('community', 'Community', $community_text, $community_images);
 
     }
 
     if (!empty($philanthropy_text)) {
       //diagonal_divider();
 
-      what_we_do_section('philanthropy', 'Philanthropy', $philanthropy_text, $philanthropy_images);
+      render_what_we_do_section('philanthropy', 'Philanthropy', $philanthropy_text, $philanthropy_images);
 
     }
 ?>
