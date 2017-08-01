@@ -31,7 +31,7 @@ if (!empty($home)) {
     <div class="container">
       <div class="grid-row margin-bottom-mid">
         <div class="grid-item item-m-5">
-          <h2 class="font-heavy highlight-heading font-size-large">Press</h2>
+          <h2 class="font-heavy highlight highlight-heading font-size-large">Press</h2>
         </div>
       </div>
       <div class="grid-row margin-bottom-mid">
