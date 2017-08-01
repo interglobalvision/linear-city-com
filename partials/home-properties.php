@@ -9,7 +9,7 @@ if( $properties->have_posts() ) {
   <section id="home-properties" class="margin-top-large margin-bottom-large">
     <div class="container-full">
       <div class="grid-row justify-center margin-bottom-mid">
-        <div class="grid-item item-s-4 text-align-center">
+        <div class="grid-item item-s-10 item-m-4 text-align-center">
           <h2 class="font-heavy highlight highlight-center font-size-large">Our Properties</h2>
         </div>
       </div>
@@ -36,7 +36,7 @@ if( $properties->have_posts() ) {
         <article <?php post_class('grid-item item-s-12 item-m-4 text-align-center margin-bottom-basic ' . $item_classes ); ?> id="post-<?php the_ID(); ?>">
 
           <a href="<?php the_permalink() ?>">
-            <?php the_post_thumbnail(); ?>
+            <?php the_post_thumbnail('item-l-5'); ?>
             <h3 class="font-heavy font-size-small"><?php echo the_title(); ?></h3>
           </a>
 
