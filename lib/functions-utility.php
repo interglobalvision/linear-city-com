@@ -74,8 +74,3 @@ function echo_post_meta($post_id, $field_id) {
     echo '';
   }
 }
-
-// Render diagonal divider SVG
-function render_divider() {
-  echo url_get_contents(get_template_directory_uri() . '/dist/img/diagonal.svg');
-}
