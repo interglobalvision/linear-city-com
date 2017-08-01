@@ -17,7 +17,11 @@ if( have_posts() ) {
     $address = get_post_meta($post->ID, '_igv_property_address', true);
     $summary = get_post_meta($post->ID, '_igv_property_summary', true);
     $gallery = get_post_meta($post->ID, '_igv_property_gallery', true);
-    $bottom_id = get_post_meta($post->ID, '_igv_property_bottom_image_id', true);
+
+    // Split $gallery into two arrays
+    $first_gallery = array_slice($gallery, 0, 2, true);
+    $second_gallery = array_slice($gallery, 2, count($gallery), true);
+
 ?>
 
         <div class="splash-with-image grid-row margin-bottom-basic align-items-end justify-end" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
@@ -41,13 +45,13 @@ if( have_posts() ) {
 <?php
     }
 
-    if (!empty($gallery)) {
+    if (!empty($first_gallery)) {
       $i = 1;
 
-      foreach ($gallery as $id => $image) {
+      foreach ($first_gallery as $id => $image) {
         $offset = '';
 
-        if ($i % 2 == 0) {
+        if ($i == 2) {
           $offset = 'offset-m-4 text-align-right';
         }
 ?>
@@ -56,7 +60,7 @@ if( have_posts() ) {
           </div>
 <?php
         $i++;
-      }
+     }
     }
 
     render_divider();
@@ -67,13 +71,13 @@ if( have_posts() ) {
           </div>
 
 <?php
-    if (!empty($bottom_id)) {
+    if (!empty($second_gallery)) {
 
       render_divider();
 ?>
 
           <div class="grid-item item-s-12 item-m-8 offset-m-2 text-align-center margin-bottom-basic">
-            <?php echo wp_get_attachment_image( $bottom_id, 'item-m-8'); ?>
+
           </div>
 
 <?php
@@ -103,4 +107,3 @@ if( have_posts() ) {
 
 <?php
 get_footer();
-?>
