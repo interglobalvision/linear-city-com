@@ -70,11 +70,15 @@ a.button, a.button:active, a.button:visited
   left: -( $margin-basic )
   top: 0
 
-.highlight-heading-alt::before
-  width: 180%
-  height: 130%
-  right: $margin-basic
-  top: 0
+.highlight-heading-alt
+  h1, h2, h3
+    padding-left: $margin-mid
+  &::before
+    width: 180%
+    height: 130%
+    right: $margin-basic
+    top: 0
+
 
 // ******************************************************
 

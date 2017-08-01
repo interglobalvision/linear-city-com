@@ -13,24 +13,21 @@ function render_what_we_do_section($id, $title, $text, $images) {
         <?php echo apply_filters('the_content', $text); ?>
       </div>
 
-      <div class="grid-item item-s-12 item-m-6 grid-row no-gutter">
-        <div class="grid-item item-s-10 offset-s-2 margin-bottom-mid">
-          <div class="highlight highlight-heading-alt">
-            <h3 class="font-heavy font-size-large"><?php echo $title; ?></h3>
-          </div>
+      <div class="grid-item item-s-12 item-m-6">
+        <div class="highlight highlight-heading-alt margin-bottom-mid">
+          <h3 class="font-heavy font-size-large"><?php echo $title; ?></h3>
         </div>
-        <?php
-          if (!empty($images)) {
-            foreach ($images as $image_id => $image_url) {
-        ?>
-        <div class="grid-item item-s-12 margin-bottom-small">
+<?php
+  if (!empty($images)) {
+    foreach ($images as $image_id => $image_url) {
+?>
+        <div class="margin-bottom-small">
           <?php echo wp_get_attachment_image($image_id, 'item-l-6'); ?>
         </div>
-        <?php
-            }
-          }
-        ?>
-        </div>
+<?php
+    }
+  }
+?>
       </div>
     </div>
   </div>
