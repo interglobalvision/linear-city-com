@@ -79,8 +79,8 @@ function igv_cmb_metaboxes() {
   ) );
 
   $cmb_property->add_field( array(
-    'name'       => esc_html__( 'Publication', 'cmb2' ),
-    'id'         => $prefix . 'quote_publication',
+    'name'       => esc_html__( 'Author / Publication', 'cmb2' ),
+    'id'         => $prefix . 'quote_author',
     'type'       => 'text',
   ) );
 

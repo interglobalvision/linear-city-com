@@ -6,19 +6,23 @@
     $thumbnail = get_the_post_thumbnail($what_we_do_page);
     $permalink = get_the_permalink($what_we_do_page);
 ?>
-  <section id="what-we-do-home">
-    <div class="grid-row">
-      <div class="grid-item item-m-5">
-        <h2 class="font-heavy">What We Do</h2>
+  <section id="what-we-do-home" class="margin-top-large margin-bottom-large">
+    <div class="container">
+      <div class="grid-row margin-bottom-mid">
+        <div class="grid-item item-m-5">
+          <h2 class="font-heavy font-size-large highlight-heading">What We Do</h2>
+        </div>
       </div>
-    </div>
-    <div class="grid-row">
-      <div class="grid-item item-m-7">
-        <?php echo apply_filters('the_content', $summary); ?>
-        <a href="<?php echo $permalink; ?>">Learn more</a>
-      </div>
-      <div class="grid-item item-m-5">
-        <?php echo $thumbnail; ?>
+      <div class="grid-row">
+        <div class="grid-item item-m-7 font-size-large">
+          <?php echo apply_filters('the_content', $summary); ?>
+          <div class="text-align-right">
+            <a class="button" href="<?php echo $permalink; ?>">Learn more</a>
+          </div>
+        </div>
+        <div class="grid-item item-m-5 padding-top-basic">
+          <?php echo $thumbnail; ?>
+        </div>
       </div>
     </div>
   </section>

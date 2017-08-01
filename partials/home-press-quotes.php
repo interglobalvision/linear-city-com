@@ -27,13 +27,14 @@ if (!empty($home)) {
   if (!empty($press_quotes)) {
 ?>
 
-  <section id="press-home">
-    <div class="grid-row">
-      <div class="grid-item item-m-5">
-        <h2 class="font-heavy">Press</h2>
+  <section id="press-home" class="margin-top-large margin-bottom-large">
+    <div class="container">
+      <div class="grid-row margin-bottom-mid">
+        <div class="grid-item item-m-5">
+          <h2 class="font-heavy highlight-heading font-size-large">Press</h2>
+        </div>
       </div>
-    </div>
-    <div class="grid-row">
+      <div class="grid-row margin-bottom-mid">
 
 <?php
     while ($press_quotes->have_posts()) {
@@ -41,20 +42,24 @@ if (!empty($home)) {
 
       $quote = get_post_meta($post->ID,'_igv_quote_text', true);
       $quote_link = get_post_meta($post->ID,'_igv_quote_link', true);
+      $quote_author = get_post_meta($post->ID,'_igv_quote_author', true);
 
 ?>
-      <div class="grid-item item-m-4">
-        <div><?php echo $quote; ?></div>
-        <h2 class="font-bolder">- <a href="<? echo $quote_link; ?>"><?php the_title(); ?></a></h2>
-      </div>
+        <div class="grid-item item-m-4">
+          <div class="font-size-mid margin-bottom-basic">" <?php echo $quote; ?> "</div>
+<?php if (!empty($quote_author)) { ?>
+          <div class="font-bolder font-size-small">- <a <?php echo !empty($quote_link) ? 'href="' . $quote_link . '"' : ''; ?>><?php echo $quote_author; ?></a></div>
+<?php } ?>
+        </div>
 <?php
     }
 ?>
-    </div>
+      </div>
 
-    <div class="grid-row">
-    <div class="grid-item item-s-3"><a href="<?php echo get_post_type_archive_link('press_quote') ?>">Press archive</a></div>
-    </div>
+      <div class="grid-row">
+        <div class="grid-item item-s-12 item-m-4 offset-m-8"><a class="button" href="<?php echo get_post_type_archive_link('press_quote') ?>">Press archive</a></div>
+        </div>
+      </div>
   </section>
 <?php
   }

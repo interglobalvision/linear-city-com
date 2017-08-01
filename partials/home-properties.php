@@ -6,14 +6,14 @@ $properties = new WP_Query( array(
 
 if( $properties->have_posts() ) {
 ?>
-  <section id="our-properties">
-    <div class="grid-row justify-center">
-      <div class="grid-item item-s-4 text-align-center">
-        <h2 class="font-heavy">Our Properties</h2>
-      </div>
-    </div>
-
+  <section id="our-properties" class="margin-top-large margin-bottom-large">
     <div class="container">
+      <div class="grid-row justify-center margin-bottom-mid">
+        <div class="grid-item item-s-4 text-align-center">
+          <h2 class="font-heavy highlight-center font-size-large">Our Properties</h2>
+        </div>
+      </div>
+
 <?php
   while( $properties->have_posts() ) {
     $properties->the_post();
@@ -33,11 +33,11 @@ if( $properties->have_posts() ) {
 <?php
     }
 ?>
-        <article <?php post_class('grid-item item-s-4 text-align-center ' . $item_classes ); ?> id="post-<?php the_ID(); ?>">
+        <article <?php post_class('grid-item item-s-12 item-m-4 text-align-center margin-bottom-basic ' . $item_classes ); ?> id="post-<?php the_ID(); ?>">
 
           <a href="<?php the_permalink() ?>">
             <?php the_post_thumbnail(); ?>
-            <h3 class="font-heavy"><?php echo the_title(); ?></h3>
+            <h3 class="font-heavy font-size-small"><?php echo the_title(); ?></h3>
           </a>
 
         </article>

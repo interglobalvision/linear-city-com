@@ -1,4 +1,72 @@
+// BASIC
+
+.container-full
+  width: 100%
+  margin: 0 auto
+  display: block
+
 .splash-with-image
-  width: 100vw
-  height: 110vh
+  height: 100vh
+  max-width: 1920px
   background-size: cover
+  background-position: center
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5)
+
+.splash-text
+  height: calc('100% - 100px')
+  color: $color-white
+
+.diagonal-divider
+  max-width: 1600px
+  path
+    stroke: $color-blue
+    stroke-width: 4
+
+a.button, a.button:active, a.button:visited
+  display: inline-block
+  text-align: center
+  background-color: $color-blue
+  padding: $margin-small $margin-basic
+  border-radius: $margin-tiny
+  color: $color-white
+  font-size: $font-size-small
+
+// ******************************************************
+
+// HIGHLIGHTS
+
+.highlight-center
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: calc( '100% + ' + ($margin-mid) )
+    height: 130%
+    top: -10%
+    left: -( $margin-basic )
+    top: 0
+    background-color: $color-yellow
+    z-index: -100
+
+.highlight-heading
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 130%
+    top: -10%
+    left: -( $margin-basic )
+    top: 0
+    background-color: $color-yellow
+    z-index: -100
+
+// ******************************************************
+
+// HEADER
+
+#header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
