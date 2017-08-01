@@ -36,3 +36,26 @@ function render_what_we_do_section($id, $title, $text, $images) {
 <?php
 
 }
+
+function render_gallery_slider($images) {
+?>
+<div class="swiper-container grid-row">
+  <div class="swiper-wrapper item-m-10">
+<?php
+  foreach($images as $image_id => $image) {
+?>
+          <div class="swiper-slide item-m-10">
+            <?php echo wp_get_attachment_image($image_id, 'gallery'); ?>
+          </div>
+<?php
+  }
+?>
+  </div>
+
+  <div class="swiper-pagination"></div>
+
+</div>
+
+<?php
+
+}

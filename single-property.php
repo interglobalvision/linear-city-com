@@ -4,7 +4,6 @@ get_header();
 
 <main id="main-content">
   <section id="posts">
-    <div class="container">
 
 <?php
 if( have_posts() ) {
@@ -17,9 +16,16 @@ if( have_posts() ) {
     $address = get_post_meta($post->ID, '_igv_property_address', true);
     $summary = get_post_meta($post->ID, '_igv_property_summary', true);
     $gallery = get_post_meta($post->ID, '_igv_property_gallery', true);
-    $bottom_id = get_post_meta($post->ID, '_igv_property_bottom_image_id', true);
+
+    // Split $gallery into two arrays
+    if (!empty($gallery)) {
+      $first_gallery = array_slice($gallery, 0, 2, true);
+      $second_gallery = array_slice($gallery, 2, count($gallery), true);
+    }
+
 ?>
 
+      <div class="container-full">
         <div class="splash-with-image grid-row margin-bottom-basic align-items-end justify-end" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
           <div class="grid-item">
 
@@ -29,7 +35,9 @@ if( have_posts() ) {
 
           </div>
         </div>
+      </div>
 
+      <div class="container">
         <div class="grid-row">
 
 <?php
@@ -41,13 +49,13 @@ if( have_posts() ) {
 <?php
     }
 
-    if (!empty($gallery)) {
+    if (!empty($first_gallery)) {
       $i = 1;
 
-      foreach ($gallery as $id => $image) {
+      foreach ($first_gallery as $id => $image) {
         $offset = '';
 
-        if ($i % 2 == 0) {
+        if ($i == 2) {
           $offset = 'offset-m-4 text-align-right';
         }
 ?>
@@ -56,7 +64,7 @@ if( have_posts() ) {
           </div>
 <?php
         $i++;
-      }
+     }
     }
 
     render_divider();
@@ -65,22 +73,23 @@ if( have_posts() ) {
           <div class="grid-item item-s-12 margin-bottom-basic">
             <?php the_content(); ?>
           </div>
+        </div>
+      </div>
 
 <?php
-    if (!empty($bottom_id)) {
+    if (!empty($second_gallery)) {
 
       render_divider();
 ?>
 
-          <div class="grid-item item-s-12 item-m-8 offset-m-2 text-align-center margin-bottom-basic">
-            <?php echo wp_get_attachment_image( $bottom_id, 'item-m-8'); ?>
-          </div>
+        <div class="container-full margin-bottom-basic">
+          <?php render_gallery_slider($second_gallery); ?>
+        </div>
 
 <?php
     }
 ?>
 
-        </div>
 
 <?php
   }
@@ -97,10 +106,8 @@ if( have_posts() ) {
 <?php
 } ?>
 
-    </div>
   </section>
 </main>
 
 <?php
 get_footer();
-?>

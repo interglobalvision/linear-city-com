@@ -65,12 +65,6 @@ function igv_cmb_metaboxes() {
     'type'       => 'file_list',
   ) );
 
-  $cmb_property->add_field( array(
-    'name'       => esc_html__( 'Bottom image', 'cmb2' ),
-    'id'         => $prefix . 'property_bottom_image',
-    'type'       => 'file',
-  ) );
-
   // PRESS QUOTES METABOXES
   $cmb_property = new_cmb2_box( array(
     'id'            => $prefix . 'press_metabox',
