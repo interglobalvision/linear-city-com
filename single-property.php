@@ -3,12 +3,11 @@ get_header();
 ?>
 
 <main id="main-content">
-  <section id="posts">
 
 <?php
 if( have_posts() ) {
 ?>
-      <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+  <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 <?php
   while( have_posts() ) {
     the_post();
@@ -24,7 +23,7 @@ if( have_posts() ) {
     }
 
 ?>
-
+    <section>
       <div class="container-full">
         <div class="splash-with-image grid-row margin-bottom-basic align-items-end justify-end" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
           <div class="grid-item">
@@ -36,22 +35,36 @@ if( have_posts() ) {
           </div>
         </div>
       </div>
-
-      <div class="container">
-        <div class="grid-row">
+    </section>
 
 <?php
     if (!empty($summary)) {
 ?>
+
+    <section>
+      <div class="container">
+        <div class="grid-row">
           <div class="highlight-hero grid-item item-s-12 margin-bottom-basic font-heavy">
             <?php echo $summary; ?>
           </div>
+        </div>
+      </div>
+    </section>
+
 <?php
+      render_divider();
+
     }
 
     if (!empty($first_gallery)) {
       $i = 1;
+?>
 
+    <section>
+      <div class="container">
+        <div class="grid-row">
+
+<?php
       foreach ($first_gallery as $id => $image) {
         $offset = '';
 
@@ -65,27 +78,38 @@ if( have_posts() ) {
 <?php
         $i++;
      }
-    }
-
-    render_divider();
 ?>
 
+        </div>
+      </div>
+    </section>
+
+<?php
+      render_divider();
+
+    }
+?>
+
+    <section>
+      <div class="container">
+        <div class="grid-row">
           <div class="grid-item item-s-12 margin-bottom-basic">
             <?php the_content(); ?>
           </div>
         </div>
       </div>
+    </section>
 
 <?php
     if (!empty($second_gallery)) {
 
       render_divider();
 ?>
-
-        <div class="container-full margin-bottom-basic">
-          <?php render_gallery_slider($second_gallery); ?>
-        </div>
-
+    <section>
+      <div class="container-full margin-bottom-basic">
+        <?php render_gallery_slider($second_gallery); ?>
+      </div>
+    </section>
 <?php
     }
 ?>
@@ -94,19 +118,20 @@ if( have_posts() ) {
 <?php
   }
 ?>
-        </article>
+  </article>
 <?php
 } else {
 ?>
-        <div class="u-alert grid-row">
-          <div class="grid-item item-s-12">
-            <?php _e('Sorry, this property was not found.'); ?>
-          </div>
-        </div>
+  <section>
+    <div class="u-alert grid-row">
+      <div class="grid-item item-s-12">
+        <?php _e('Sorry, this property was not found.'); ?>
+      </div>
+    </div>
+  </section>
 <?php
 } ?>
 
-  </section>
 </main>
 
 <?php
