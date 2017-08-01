@@ -24,7 +24,7 @@
             if ($footer_email) {
           ?>
           <h4 class="font-heavy">Email</h4>
-          <a class="footer-contact-text" href="mailto:<?php echo $footer_email; ?>" target="_blank" rel="noopener"><?php echo $footer_email; ?></a>
+          <a class="footer-contact-text link-underline" href="mailto:<?php echo $footer_email; ?>" target="_blank" rel="noopener"><?php echo $footer_email; ?></a>
           <?php
             }
           ?>
@@ -34,7 +34,7 @@
             if ($footer_phone) {
           ?>
           <h4 class="font-heavy">Phone</h4>
-          <a class="footer-contact-text" href="tel:<?php echo $footer_phone; ?>"><?php echo $footer_phone; ?></a>
+          <a class="footer-contact-text link-underline" href="tel:<?php echo $footer_phone; ?>"><?php echo $footer_phone; ?></a>
           <?php
             }
           ?>
@@ -44,7 +44,7 @@
             if ($footer_address) {
           ?>
           <h4 class="font-heavy">Offices</h4>
-          <a class="footer-contact-text" href="https://www.google.com/maps/search/<?php echo urlencode($footer_address); ?>/" target="_blank" rel="noopener"><?php echo apply_filters('the_content', $footer_address); ?></a>
+          <a class="footer-contact-text link-underline" href="https://www.google.com/maps/search/<?php echo urlencode($footer_address); ?>/" target="_blank" rel="noopener"><?php echo apply_filters('the_content', $footer_address); ?></a>
           <?php
             }
           ?>
