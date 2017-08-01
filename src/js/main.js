@@ -23,6 +23,8 @@ Site = {
         spaceBetween: 32,
 
         paginationClickable: true,
+
+        centeredSlides: true,
       });
 
 
