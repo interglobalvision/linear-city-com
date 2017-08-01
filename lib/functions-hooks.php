@@ -38,7 +38,8 @@ function create_custom_pages() {
   );
 
   foreach($custom_pages as $page_name => $page_title) {
-    if( empty(get_page_by_path($page_name)) ) {
+    $page = get_page_by_path($page_name);
+    if( empty($page) ) {
       wp_insert_post( array(
         'post_type' => 'page',
         'post_title' => $page_title,
@@ -49,4 +50,3 @@ function create_custom_pages() {
   }
 }
 add_filter( 'after_setup_theme', 'create_custom_pages' );
-
