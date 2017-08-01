@@ -1,6 +1,6 @@
 // BASIC
 
-html,body
+html, body
   overflow-x: hidden
 
 .container-full
@@ -81,13 +81,47 @@ a.button, a.button:active, a.button:visited
   top: 0
 
 .highlight-heading-alt
-  h1, h2, h3
+  h1,
+  h2,
+  h3
     padding-left: $margin-mid
   &::before
     width: 180%
     height: 130%
     right: $margin-basic
     top: 0
+
+// ******************************************************
+
+// SLIDER
+
+.swiper-container
+  overflow: visible
+
+.swiper-slide
+  font-size: 0
+
+.swiper-pagination
+  width: 100%
+  display: flex
+
+.swiper-pagination-bullet
+  height: 6px
+  border-radius: 0
+  background: $color-blue
+  opacity: 1
+  margin: 0
+  flex-grow: 1
+  &:hover
+    opacity: .5
+
+.swiper-pagination-bullet-active
+  background: $color-yellow
+  &:hover
+    opacity: 1
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+  margin: 0
 
 // ******************************************************
 

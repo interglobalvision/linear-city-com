@@ -39,21 +39,25 @@ function render_what_we_do_section($id, $title, $text, $images) {
 
 function render_gallery_slider($images) {
 ?>
-<div class="swiper-container grid-row">
-  <div class="swiper-wrapper item-m-10">
-<?php
-  foreach($images as $image_id => $image) {
-?>
-          <div class="swiper-slide item-m-10">
-            <?php echo wp_get_attachment_image($image_id, 'gallery'); ?>
-          </div>
-<?php
-  }
-?>
+<div class="container">
+  <div class="grid-row justify-center">
+    <div class="swiper-container item-s-10 grid-row">
+      <div class="swiper-wrapper align-items-center margin-bottom-mid">
+    <?php
+      foreach($images as $image_id => $image) {
+    ?>
+              <div class="swiper-slide text-align-center">
+                <?php echo wp_get_attachment_image($image_id, 'gallery'); ?>
+              </div>
+    <?php
+      }
+    ?>
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+    </div>
   </div>
-
-  <div class="swiper-pagination"></div>
-
 </div>
 
 <?php
