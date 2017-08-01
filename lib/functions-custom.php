@@ -63,3 +63,16 @@ function render_gallery_slider($images) {
 <?php
 
 }
+
+// Render diagonal divider SVG
+function render_divider() {
+
+?>
+
+  <div class="diagonal-divider-holder container-full">
+    <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/diagonal.svg'); ?>
+  </div>
+
+<?php
+
+}
