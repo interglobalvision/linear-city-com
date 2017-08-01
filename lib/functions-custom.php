@@ -54,7 +54,7 @@ function render_gallery_slider($images) {
     ?>
       </div>
 
-      <div class="swiper-pagination margin-top-basic"></div>
+      <div class="swiper-pagination"></div>
 
     </div>
   </div>
