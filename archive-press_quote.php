@@ -35,10 +35,10 @@ if( have_posts() ) {
 <?php
       if (has_post_thumbnail()) {
 ?>
-          <div class="grid-item item-s-4">
-            <?php the_post_thumbnail('item-l-4'); ?>
+          <div class="grid-item item-s-8 item-m-4 margin-bottom-basic">
+            <?php the_post_thumbnail('item-l-6'); ?>
           </div>
-          <div class="grid-item item-s-8 highlight highlight-press">
+          <div class="grid-item item-s-11 item-m-8 highlight highlight-press">
 <?php
       } else {
 ?>
@@ -47,7 +47,7 @@ if( have_posts() ) {
       }
 ?>
             <div class="highlight-press-text">
-              <span class="font-size-extra">"<?php echo $quote; ?>"</span><span class="u-inline-block font-size-mid font-bolder">&emsp;- <?php echo $publication; ?></span>
+              <span class="font-size-large">"<?php echo $quote; ?>"</span><span class="u-inline-block font-size-mid font-bolder">&emsp;- <?php echo $publication; ?></span>
             </div>
           </div>
         </div>
@@ -64,8 +64,8 @@ if( have_posts() ) {
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
       <div class="container">
         <div class="grid-row margin-bottom-large margin-top-large justify-center">
-          <div class="grid-item item-s-11">
-            <span class="font-size-large">"<?php echo $quote; ?>"</span><span class="u-inline-block font-size-small font-bolder">&emsp;- <?php  echo $publication; ?></span>
+          <div class="grid-item item-s-10 item-l-9">
+            <span class="font-size-mid">"<?php echo $quote; ?>"</span><span class="u-inline-block font-size-small font-bolder">&emsp;- <?php  echo $publication; ?></span>
           </div>
         </div>
       </div>
