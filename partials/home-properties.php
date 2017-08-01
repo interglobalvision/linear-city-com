@@ -10,7 +10,7 @@ if( $properties->have_posts() ) {
     <div class="container">
       <div class="grid-row justify-center margin-bottom-mid">
         <div class="grid-item item-s-4 text-align-center">
-          <h2 class="font-heavy highlight-center font-size-large">Our Properties</h2>
+          <h2 class="font-heavy highlight highlight-center font-size-large">Our Properties</h2>
         </div>
       </div>
 

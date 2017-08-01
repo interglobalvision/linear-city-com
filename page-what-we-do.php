@@ -24,10 +24,10 @@ if( have_posts() ) {
 ?>
 
         <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-          <section id="what-we-do-hero">
+          <section id="what-we-do-hero" class="margin-top-large margin-bottom-mid padding-top-mid">
             <div class="container">
-              <div class="grid-row">
-                <div class="grid-item item-s-12">
+              <div class="grid-row justify-center">
+                <div class="grid-item item-s-11 highlight highlight-hero font-size-extra font-heavy">
                   <?php the_content(); ?>
                 </div>
               </div>
@@ -47,18 +47,18 @@ if( have_posts() ) {
 
     if (!empty($bios)) {
 ?>
-          <section id="what-we-do-bios">
+          <section id="what-we-do-bios" class="margin-bottom-large">
             <div class="container">
 <?php
       foreach ($bios as $bio) {
 ?>
-              <div class="grid-row">
+              <div class="grid-row margin-top-large">
                 <div class="grid-item item-s-12 item-m-4">
 <?php
         if (!empty($bio['name'])) {
 ?>
-                  <div class="highlight-section-title">
-                    <h3 class="font-heavy"><?php echo $bio['name']; ?></h3>
+                  <div class="highlight highlight-heading-wide margin-bottom-mid">
+                    <h3 class="font-heavy font-size-large"><?php echo $bio['name']; ?></h3>
                     <span><?php echo !empty($bio['position']) ? $bio['position'] : ''; ?></span>
                   </div>
 <?php
@@ -70,7 +70,7 @@ if( have_posts() ) {
                     }
                   ?>
                 </div>
-                <div class="grid-item item-s-12 item-m-7 offset-m-1">
+                <div class="grid-item item-s-12 item-m-7 offset-m-1 margin-top-basic">
                   <?php echo !empty($bio['bio']) ? apply_filters('the_content', $bio['bio']) : ''; ?>
                 </div>
               </div>
@@ -83,21 +83,21 @@ if( have_posts() ) {
     }
 
     if (!empty($realestate_text)) {
-      //diagonal_divider();
+      render_divider();
 
       render_what_we_do_section('realestate', 'Real Estate', $realestate_text, $realestate_images);
 
     }
 
     if (!empty($community_text)) {
-      //diagonal_divider();
+      render_divider();
 
       render_what_we_do_section('community', 'Community', $community_text, $community_images);
 
     }
 
     if (!empty($philanthropy_text)) {
-      //diagonal_divider();
+      render_divider();
 
       render_what_we_do_section('philanthropy', 'Philanthropy', $philanthropy_text, $philanthropy_images);
 
