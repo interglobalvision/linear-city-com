@@ -6,8 +6,8 @@ $properties = new WP_Query( array(
 
 if( $properties->have_posts() ) {
 ?>
-  <section id="our-properties" class="margin-top-large margin-bottom-large">
-    <div class="container">
+  <section id="home-properties" class="margin-top-large margin-bottom-large">
+    <div class="container-full">
       <div class="grid-row justify-center margin-bottom-mid">
         <div class="grid-item item-s-4 text-align-center">
           <h2 class="font-heavy highlight highlight-center font-size-large">Our Properties</h2>
