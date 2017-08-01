@@ -3,11 +3,19 @@ get_header();
 ?>
 
 <main id="main-content">
+  <section class="margin-top-large margin-bottom-mid padding-top-mid">
+    <div class="container">
+      <div class="grid-row justify-center">
+        <h1 class="grid-item item-s-11 highlight highlight-hero font-size-extra font-heavy">
+          Our Properties
+        </h1>
+      </div>
+    </div>
+  </section>
+
   <section id="posts">
     <div class="container">
-      <div class="grid-row margin-bottom-basic">
-
-        <h1 class="highlight-hero grid-item item-s-12 font-heavy">Our Properties</h1>
+      <div class="grid-row margin-bottom-large">
 
 <?php
 if( have_posts() ) {
@@ -17,12 +25,12 @@ if( have_posts() ) {
     $address = get_post_meta($post->ID, '_igv_property_address', true);
 ?>
 
-        <article <?php post_class('grid-item item-s-12 item-m-6 margin-bottom-basic'); ?> id="post-<?php the_ID(); ?>">
+        <article <?php post_class('grid-item item-s-12 item-m-6 margin-top-mid'); ?> id="post-<?php the_ID(); ?>">
 
           <a href="<?php the_permalink() ?>">
             <?php the_post_thumbnail('item-m-6', array('class'=>'margin-bottom-small')); ?>
 
-            <h2 class="font-heavy"><?php the_title(); ?></h2>
+            <h2 class="font-heavy font-size-mid"><?php the_title(); ?></h2>
 
             <?php echo !empty($address) ? $address : ''; ?>
           </a>
