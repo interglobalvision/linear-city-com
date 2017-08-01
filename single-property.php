@@ -18,8 +18,10 @@ if( have_posts() ) {
     $gallery = get_post_meta($post->ID, '_igv_property_gallery', true);
 
     // Split $gallery into two arrays
-    $first_gallery = array_slice($gallery, 0, 2, true);
-    $second_gallery = array_slice($gallery, 2, count($gallery), true);
+    if (!empty($gallery)) {
+      $first_gallery = array_slice($gallery, 0, 2, true);
+      $second_gallery = array_slice($gallery, 2, count($gallery), true);
+    }
 
 ?>
 
