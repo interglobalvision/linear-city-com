@@ -4,7 +4,6 @@ get_header();
 
 <main id="main-content">
   <section id="posts">
-    <div class="container">
 
 <?php
 if( have_posts() ) {
@@ -24,6 +23,7 @@ if( have_posts() ) {
 
 ?>
 
+      <div class="container-full">
         <div class="splash-with-image grid-row margin-bottom-basic align-items-end justify-end" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
           <div class="grid-item">
 
@@ -33,7 +33,9 @@ if( have_posts() ) {
 
           </div>
         </div>
+      </div>
 
+      <div class="container">
         <div class="grid-row">
 
 <?php
@@ -69,6 +71,8 @@ if( have_posts() ) {
           <div class="grid-item item-s-12 margin-bottom-basic">
             <?php the_content(); ?>
           </div>
+        </div>
+      </div>
 
 <?php
     if (!empty($second_gallery)) {
@@ -76,15 +80,14 @@ if( have_posts() ) {
       render_divider();
 ?>
 
-          <div class="grid-item item-s-12 item-m-8 offset-m-2 text-align-center margin-bottom-basic">
-
-          </div>
+        <div class="container-full margin-bottom-basic">
+          <?php render_gallery_slider($second_gallery); ?>
+        </div>
 
 <?php
     }
 ?>
 
-        </div>
 
 <?php
   }
@@ -101,7 +104,6 @@ if( have_posts() ) {
 <?php
 } ?>
 
-    </div>
   </section>
 </main>
 

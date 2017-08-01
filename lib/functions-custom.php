@@ -5,7 +5,6 @@
 function render_what_we_do_section($id, $title, $text, $images) {
 
 ?>
-
 <section id="what-we-do-<?php echo $id; ?>">
   <div class="container">
     <div class="grid-row">
@@ -28,6 +27,32 @@ function render_what_we_do_section($id, $title, $text, $images) {
     </div>
   </div>
 </section>
+
+<?php
+
+}
+
+function render_gallery_slider($images) {
+?>
+<div class="swiper-container grid-row">
+  <div class="swiper-wrapper item-m-10">
+<?php
+  foreach($images as $image_id => $image) {
+?>
+          <div class="swiper-slide item-m-10">
+            <?php echo wp_get_attachment_image($image_id, 'gallery'); ?>
+          </div>
+<?php
+  }
+?>
+  </div>
+
+  <div class="swiper-pagination"></div>
+      <!-- if we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+</div>
 
 <?php
 
