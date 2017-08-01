@@ -9,19 +9,27 @@ html,body
   display: block
   overflow: hidden
 
+.splash-holder
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, .5));
+
 .splash-with-image
   height: 100vh
   max-width: 1920px
   background-size: cover
   background-position: center
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5)
+  clip-path: polygon(0 0, 0 95vh, 100% 100%, 100% 0)
 
 .splash-text
-  height: calc('100% - 100px')
+  height: 90vh
   color: $color-white
 
-.diagonal-divider
+.diagonal-divider-holder
+  height: 5vh
   max-width: 1600px
+
+.diagonal-divider
+  height: 100%
+  width: 100%
   path
     stroke: $color-blue
     stroke-width: 4
@@ -121,9 +129,17 @@ a.button, a.button:active, a.button:visited
   color: $color-white
   overflow-y: scroll
   transform: translateX(100%)
-  transition: 300ms transform cubic-bezier(0, 0, 0.03, 1.01)
+  transition: 300ms transform cubic-bezier(0, 0, .03, 1.01)
   &.active
     transform: translateX(0)
+
+// ******************************************************
+
+// HOME
+
+#home-properties
+  .container-full
+    max-width: 1500px
 
 // ******************************************************
 
