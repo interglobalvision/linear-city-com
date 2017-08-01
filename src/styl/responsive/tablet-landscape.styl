@@ -11,8 +11,8 @@ a.button, a.button:active, a.button:visited
 // HIGHLIGHTS
 
 .highlight-center::before
-    width: calc( '100% + ' + ($margin-mid) )
-    left: -( $margin-basic )
+  width: calc( '100% + ' + ($margin-mid) )
+  left: -( $margin-basic )
 
 .highlight-hero::before
   width: 86%
@@ -20,3 +20,26 @@ a.button, a.button:active, a.button:visited
   left: 6%
   top: 50%
   margin-top: -50px
+
+// ******************************************************
+
+// HEADER
+
+#header-menu
+  display: block
+  li
+    margin-left: $margin-mid
+
+#mobile-open-holder
+  display: none
+
+// ******************************************************
+
+// FOOTER
+
+#footer-menu
+  li
+    margin-left: $margin-mid
+
+.footer-contact-text
+  font-size: $font-size-mid
