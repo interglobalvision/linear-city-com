@@ -54,6 +54,12 @@ function igv_cmb_metaboxes() {
   ) );
 
   $cmb_property->add_field( array(
+    'name'       => esc_html__( 'Map URL', 'cmb2' ),
+    'id'         => $prefix . 'property_map',
+    'type'       => 'text_url',
+  ) );
+
+  $cmb_property->add_field( array(
     'name'       => esc_html__( 'Summary', 'cmb2' ),
     'id'         => $prefix . 'property_summary',
     'type'       => 'textarea_small',
