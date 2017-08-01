@@ -44,11 +44,15 @@ if (!empty($home)) {
       $quote_link = get_post_meta($post->ID,'_igv_quote_link', true);
       $quote_author = get_post_meta($post->ID,'_igv_quote_author', true);
 
+      if ($quote_link) {
+        $quote_author = '<a class="link-underline" href="' . $quote_link . '">' . $quote_author . '</a>';
+      }
+
 ?>
         <div class="grid-item item-s-12 item-m-4 margin-bottom-mid">
           <div class="font-size-mid margin-bottom-basic">"<?php echo $quote; ?>"</div>
 <?php if (!empty($quote_author)) { ?>
-          <div class="font-bolder font-size-small">- <a <?php echo !empty($quote_link) ? 'href="' . $quote_link . '"' : ''; ?>><?php echo $quote_author; ?></a></div>
+          <div class="font-bolder font-size-small">&emsp;- <?php echo $quote_author; ?></div>
 <?php } ?>
         </div>
 <?php

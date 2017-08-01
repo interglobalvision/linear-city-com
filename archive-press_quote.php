@@ -20,7 +20,7 @@ if( have_posts() ) {
     $highlight = get_post_meta($post->ID, '_igv_quote_highlight', true);
 
     if ($link) {
-      $publication = '<a href="' . $link . '">' . $publication . '</a>';
+      $publication = '<a class="link-underline" href="' . $link . '">' . $publication . '</a>';
     }
 
     if ($highlight === 'on') {
