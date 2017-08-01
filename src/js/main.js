@@ -12,6 +12,18 @@ Site = {
 
     $(document).ready(function () {
       Site.Header.init();
+
+      var mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        pagination: '.swiper-pagination',
+        loop: true,
+        slidesPerView: 'auto',
+        loopedSlides: 5,
+        spaceBetween: 32,
+        paginationClickable: true,
+        centeredSlides: true,
+      });
+
     });
 
   },
@@ -21,7 +33,7 @@ Site = {
     var windowWidth = $(window).width();
 
     if (windowWidth >= 1024 && $('#mobile-menu').hasClass('active')) {
-      $('#mobile-menu').removeClass('active')
+      $('#mobile-menu').removeClass('active');
     }
   },
 

@@ -10,7 +10,7 @@
     <div class="container">
       <div class="grid-row margin-bottom-mid">
         <div class="grid-item item-m-5">
-          <h2 class="font-heavy font-size-large highlight-heading">What We Do</h2>
+          <h2 class="font-heavy font-size-large highlight highlight-heading">What We Do</h2>
         </div>
       </div>
       <div class="grid-row">
