@@ -10,8 +10,13 @@ a.button, a.button:active, a.button:visited
 
 // HIGHLIGHTS
 
-.highlight-center
-  &:before
+.highlight-center::before
     width: calc( '100% + ' + ($margin-mid) )
     left: -( $margin-basic )
-    background-color: $color-yellow
+
+.highlight-hero::before
+  width: 86%
+  height: 100px
+  left: 6%
+  top: 50%
+  margin-top: -50px
