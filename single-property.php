@@ -13,8 +13,14 @@ if( have_posts() ) {
     the_post();
 
     $address = get_post_meta($post->ID, '_igv_property_address', true);
+    $map_url = get_post_meta($post->ID, '_igv_property_map', true);
     $summary = get_post_meta($post->ID, '_igv_property_summary', true);
     $gallery = get_post_meta($post->ID, '_igv_property_gallery', true);
+
+    // Add map link to address
+    if (!empty($map_url)) {
+      $address = '<a class="link-underline" href="' . esc_url($map_url) . '">' . $address . '</a>';
+    }
 
     // Split $gallery into two arrays
     if (!empty($gallery)) {
