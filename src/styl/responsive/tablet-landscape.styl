@@ -21,6 +21,25 @@ a.button, a.button:active, a.button:visited
   top: 50%
   margin-top: -50px
 
+.highlight-heading::before
+  left: -( $margin-basic )
+
+.highlight-heading-wide::before
+  left: -( $margin-basic )
+
+.highlight-heading-alt
+  h1,
+  h2,
+  h3
+    padding-left: $margin-mid
+  &::before
+    right: $margin-basic
+
+.highlight-press:before
+  height: 100px
+  right: $margin-basic
+  margin-top: -50px
+
 // ******************************************************
 
 // HEADER
