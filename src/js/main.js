@@ -22,10 +22,6 @@ Site = {
 
         spaceBetween: 32,
 
-        // Navigation arrows
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-
         paginationClickable: true,
       });
 
