@@ -23,7 +23,7 @@ if( have_posts() ) {
     }
 
 ?>
-    <section>
+    <section class="splash-holder">
       <div class="container-full splash-with-image" style="background-image: url(<?php the_post_thumbnail_url('splash'); ?>)">
         <div class="container splash-text grid-row margin-bottom-basic align-items-end justify-end" >
           <div class="grid-item text-align-right">
