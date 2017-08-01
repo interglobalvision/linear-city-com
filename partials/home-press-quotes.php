@@ -30,11 +30,11 @@ if (!empty($home)) {
   <section id="press-home" class="margin-top-large margin-bottom-large">
     <div class="container">
       <div class="grid-row margin-bottom-mid">
-        <div class="grid-item item-m-5">
+        <div class="grid-item item-s-12 item-m-5">
           <h2 class="font-heavy highlight highlight-heading font-size-large">Press</h2>
         </div>
       </div>
-      <div class="grid-row margin-bottom-mid">
+      <div class="grid-row">
 
 <?php
     while ($press_quotes->have_posts()) {
@@ -45,7 +45,7 @@ if (!empty($home)) {
       $quote_author = get_post_meta($post->ID,'_igv_quote_author', true);
 
 ?>
-        <div class="grid-item item-m-4">
+        <div class="grid-item item-s-12 item-m-4 margin-bottom-mid">
           <div class="font-size-mid margin-bottom-basic">"<?php echo $quote; ?>"</div>
 <?php if (!empty($quote_author)) { ?>
           <div class="font-bolder font-size-small">- <a <?php echo !empty($quote_link) ? 'href="' . $quote_link . '"' : ''; ?>><?php echo $quote_author; ?></a></div>
