@@ -24,11 +24,11 @@ if( have_posts() ) {
 
 ?>
     <section>
-      <div class="container-full">
-        <div class="splash-with-image grid-row margin-bottom-basic align-items-end justify-end" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
-          <div class="grid-item">
+      <div class="container-full splash-with-image" style="background-image: url(<?php the_post_thumbnail_url('splash'); ?>)">
+        <div class="container splash-text grid-row margin-bottom-basic align-items-end justify-end" >
+          <div class="grid-item text-align-right">
 
-            <h2><?php the_title(); ?></h2>
+            <h2 class="font-size-giant"><?php the_title(); ?></h2>
 
             <span class="font-heavy"><?php echo !empty($address) ? $address : ''; ?></span>
 
@@ -41,10 +41,10 @@ if( have_posts() ) {
     if (!empty($summary)) {
 ?>
 
-    <section>
+    <section class="margin-top-large margin-bottom-large">
       <div class="container">
-        <div class="grid-row">
-          <div class="highlight-hero grid-item item-s-12 margin-bottom-basic font-heavy">
+        <div class="grid-row justify-center">
+          <div class="grid-item item-s-11 highlight highlight-hero font-size-large font-heavy">
             <?php echo $summary; ?>
           </div>
         </div>
@@ -60,7 +60,7 @@ if( have_posts() ) {
       $i = 1;
 ?>
 
-    <section>
+    <section class="margin-top-large margin-bottom-large">
       <div class="container">
         <div class="grid-row">
 
@@ -90,10 +90,10 @@ if( have_posts() ) {
     }
 ?>
 
-    <section>
+    <section class="margin-top-large margin-bottom-large">
       <div class="container">
         <div class="grid-row">
-          <div class="grid-item item-s-12 margin-bottom-basic">
+          <div class="grid-item item-s-12 margin-bottom-basic text-columns text-columns-m-2">
             <?php the_content(); ?>
           </div>
         </div>
@@ -105,7 +105,7 @@ if( have_posts() ) {
 
       render_divider();
 ?>
-    <section>
+    <section class="margin-top-large margin-bottom-large">
       <div class="container-full margin-bottom-basic">
         <?php render_gallery_slider($second_gallery); ?>
       </div>
