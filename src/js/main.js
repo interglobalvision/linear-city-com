@@ -25,6 +25,8 @@ Site = {
         // Navigation arrows
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
+
+        paginationClickable: true,
       });
 
 
