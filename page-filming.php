@@ -77,17 +77,17 @@ if( have_posts() ) {
 <?php
       if (!empty($contact_email)) {
 ?>
-                <div class="grid-item item-s-4 margin-bottom-basic">
+                <div class="grid-item item-s-12 item-m-5 margin-bottom-basic">
                   <h4 class="font-heavy">Email</h4>
-                  <a class="footer-contact-text" href="mailto:<?php echo $contact_email; ?>" target="_blank" rel="noopener"><?php echo $contact_email; ?></a>
+                  <a class="footer-contact-text link-underline" href="mailto:<?php echo $contact_email; ?>" target="_blank" rel="noopener"><?php echo $contact_email; ?></a>
                 </div>
 <?php
       }
       if (!empty($contact_phone)) {
 ?>
-                <div class="grid-item item-s-4 margin-bottom-basic">
+                <div class="grid-item item-s-12 item-m-5 margin-bottom-basic">
                   <h4 class="font-heavy">Phone</h4>
-                  <a class="footer-contact-text" href="tel:<?php echo $contact_phone; ?>"><?php echo $contact_phone; ?></a>
+                  <a class="footer-contact-text link-underline" href="tel:<?php echo $contact_phone; ?>"><?php echo $contact_phone; ?></a>
                 </div>
 <?php
       }

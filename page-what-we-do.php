@@ -53,7 +53,7 @@ if( have_posts() ) {
       foreach ($bios as $bio) {
 ?>
               <div class="grid-row margin-top-large">
-                <div class="grid-item item-s-12 item-m-4">
+                <div class="grid-item item-s-12 item-m-5 item-l-4">
 <?php
         if (!empty($bio['name'])) {
 ?>
@@ -70,7 +70,7 @@ if( have_posts() ) {
                     }
                   ?>
                 </div>
-                <div class="grid-item item-s-12 item-m-7 offset-m-1 margin-top-basic">
+                <div class="grid-item item-s-12 item-m-7 offset-l-1 margin-top-basic">
                   <?php echo !empty($bio['bio']) ? apply_filters('the_content', $bio['bio']) : ''; ?>
                 </div>
               </div>

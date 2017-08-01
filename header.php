@@ -87,7 +87,7 @@
           ?>
           <div class="grid-item item-s-12 margin-bottom-basic">
             <h4 class="font-heavy">Email</h4>
-            <a class="font-size-mid" href="mailto:<?php echo $footer_email; ?>" target="_blank" rel="noopener"><?php echo $footer_email; ?></a>
+            <a class="font-size-mid link-underline" href="mailto:<?php echo $footer_email; ?>" target="_blank" rel="noopener"><?php echo $footer_email; ?></a>
           </div>
           <?php
             }
@@ -96,7 +96,7 @@
           ?>
           <div class="grid-item item-s-12 margin-bottom-basic">
             <h4 class="font-heavy">Phone</h4>
-            <a class="font-size-mid" href="tel:<?php echo $footer_phone; ?>"><?php echo $footer_phone; ?></a>
+            <a class="font-size-mid link-underline" href="tel:<?php echo $footer_phone; ?>"><?php echo $footer_phone; ?></a>
           </div>
           <?php
             }
@@ -105,7 +105,7 @@
           ?>
           <div class="grid-item item-s-12 margin-bottom-basic">
             <h4 class="font-heavy">Offices</h4>
-            <a class="font-size-mid" href="https://www.google.com/maps/search/<?php echo urlencode($footer_address); ?>/" target="_blank" rel="noopener"><?php echo apply_filters('the_content', $footer_address); ?></a>
+            <a class="font-size-mid link-underline" href="https://www.google.com/maps/search/<?php echo urlencode($footer_address); ?>/" target="_blank" rel="noopener"><?php echo apply_filters('the_content', $footer_address); ?></a>
           </div>
           <?php
             }
