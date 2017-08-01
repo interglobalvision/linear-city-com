@@ -9,13 +9,16 @@ function render_what_we_do_section($id, $title, $text, $images) {
 <section id="what-we-do-<?php echo $id; ?>" class="margin-top-large margin-bottom-large">
   <div class="container">
     <div class="grid-row">
-      <div class="grid-item item-s-12 item-m-6">
+      <div class="grid-item item-s-12 item-m-6 desktop-only">
         <?php echo apply_filters('the_content', $text); ?>
       </div>
 
       <div class="grid-item item-s-12 item-m-6">
         <div class="highlight highlight-heading-alt margin-bottom-mid">
           <h3 class="font-heavy font-size-large"><?php echo $title; ?></h3>
+        </div>
+        <div class="mobile-only margin-bottom-mid">
+          <?php echo apply_filters('the_content', $text); ?>
         </div>
 <?php
   if (!empty($images)) {
