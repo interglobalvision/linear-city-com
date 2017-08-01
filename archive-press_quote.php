@@ -47,12 +47,7 @@ if( have_posts() ) {
       }
 ?>
             <div class="highlight-press-text">
-              <span class="font-size-extra">"<?php echo $quote; ?>"</span><span class="u-inline-block font-size-mid font-bolder">&emsp;- <?php
-                if (!empty($link)) {
-                  echo '<a href="' . esc_url($link) . '">' . $publication . '</a>';
-                } else {
-                  echo $publication;
-                } ?></span>
+              <span class="font-size-extra">"<?php echo $quote; ?>"</span><span class="u-inline-block font-size-mid font-bolder">&emsp;- <?php echo $publication; ?></span>
             </div>
           </div>
         </div>
@@ -70,12 +65,7 @@ if( have_posts() ) {
       <div class="container">
         <div class="grid-row margin-bottom-large margin-top-large justify-center">
           <div class="grid-item item-s-11">
-            <span class="font-size-large">"<?php echo $quote; ?>"</span><span class="u-inline-block font-size-small font-bolder">&emsp;- <?php
-              if (!empty($link)) {
-                echo '<a href="' . esc_url($link) . '">' . $publication . '</a>';
-              } else {
-                echo $publication;
-              } ?></span>
+            <span class="font-size-large">"<?php echo $quote; ?>"</span><span class="u-inline-block font-size-small font-bolder">&emsp;- <?php  echo $publication; ?></span>
           </div>
         </div>
       </div>
