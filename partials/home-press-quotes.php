@@ -46,7 +46,7 @@ if (!empty($home)) {
 
 ?>
         <div class="grid-item item-m-4">
-          <div class="font-size-mid margin-bottom-basic">" <?php echo $quote; ?> "</div>
+          <div class="font-size-mid margin-bottom-basic">"<?php echo $quote; ?>"</div>
 <?php if (!empty($quote_author)) { ?>
           <div class="font-bolder font-size-small">- <a <?php echo !empty($quote_link) ? 'href="' . $quote_link . '"' : ''; ?>><?php echo $quote_author; ?></a></div>
 <?php } ?>

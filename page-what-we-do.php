@@ -38,8 +38,8 @@ if( have_posts() ) {
     if (has_post_thumbnail()) {
 ?>
 
-          <section id="what-we-do-splash" class="splash-with-image" style="background-image: url(<?php echo get_the_post_thumbnail_url($post->ID, 'splash'); ?>)">
-
+          <section id="what-we-do-splash" class="splash-holder">
+            <div class="splash-with-image" style="background-image: url(<?php echo get_the_post_thumbnail_url($post->ID, 'splash'); ?>)"></div>
           </section>
 
 <?php
