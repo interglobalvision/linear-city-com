@@ -147,7 +147,7 @@ font-sizes($font-size-basic, $font-size-giant, $font-size-extra, $font-size-larg
   $font-size-giant = 72px
   $font-size-extra = 42px
   $font-size-large = 28px
-  $font-size-mid = 24px
+  $font-size-mid = 22px
   $font-size-small = 19px
 
   space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
@@ -176,8 +176,8 @@ font-sizes($font-size-basic, $font-size-giant, $font-size-extra, $font-size-larg
   $margin-large = ($gutter * 3.5)
 
   $font-size-basic = 24px
-  $font-size-giant = 120px
-  $font-size-extra = 64px
+  $font-size-giant = 96px
+  $font-size-extra = 48px
   $font-size-large = 40px
   $font-size-mid = 32px
   $font-size-small = 27px
@@ -191,6 +191,15 @@ font-sizes($font-size-basic, $font-size-giant, $font-size-extra, $font-size-larg
   @import 'responsive/tablet-landscape'
 
 @media screen and (min-width: 1280px)
+
+  $font-size-basic = 24px
+  $font-size-giant = 120px
+  $font-size-extra = 64px
+  $font-size-large = 40px
+  $font-size-mid = 32px
+  $font-size-small = 27px
+
+  font-sizes($font-size-basic, $font-size-giant, $font-size-extra, $font-size-large, $font-size-mid, $font-size-small)
 
   @import 'responsive/laptop'
 
