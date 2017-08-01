@@ -251,9 +251,15 @@ function igv_cmb_metaboxes() {
   if (!empty($filming_page) ) {
     $cmb_filming = new_cmb2_box( array(
       'id'            => $prefix . 'filming_metabox',
-      'title'         => esc_html__( 'Homepage options', 'cmb2' ),
+      'title'         => esc_html__( 'Information', 'cmb2' ),
       'object_types'  => array( 'page', ), // Post type
       'show_on'      => array( 'key' => 'id', 'value' => array($filming_page->ID) ),
+    ) );
+
+    $cmb_filming->add_field( array(
+      'name'       => esc_html__( 'Summary', 'cmb2' ),
+      'id'         => $prefix . 'filming_summary',
+      'type'       => 'textarea_small',
     ) );
 
     $cmb_filming->add_field( array(
@@ -261,6 +267,25 @@ function igv_cmb_metaboxes() {
       'id'         => $prefix . 'filming_home_summary',
       'type'       => 'textarea_small',
     ) );
+
+    $cmb_filming->add_field( array(
+      'name'       => esc_html__( 'Gallery', 'cmb2' ),
+      'id'         => $prefix . 'filming_gallery',
+      'type'       => 'file_list',
+    ) );
+
+    $cmb_filming->add_field( array(
+      'name'       => esc_html__( 'Contact Email', 'cmb2' ),
+      'id'         => $prefix . 'filming_contact_email',
+      'type'       => 'text',
+    ) );
+
+    $cmb_filming->add_field( array(
+      'name'       => esc_html__( 'Contact Phone', 'cmb2' ),
+      'id'         => $prefix . 'filming_contact_phone',
+      'type'       => 'text',
+    ) );
+
   }
 
 }
