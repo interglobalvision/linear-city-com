@@ -25,6 +25,23 @@ a.button, a.button:active, a.button:visited
     left: -( $margin-basic )
     background-color: $color-yellow
 
+.highlight-heading::before
+  left: -( $margin-basic )
+
+.highlight-heading-wide::before
+  left: -( $margin-basic )
+
+.highlight-heading-alt
+  h1,
+  h2,
+  h3
+    padding-left: $margin-mid
+  &::before
+    right: $margin-basic
+
+.highlight-press:before
+  right: $margin-basic
+
 // ******************************************************
 
 // HEADER
