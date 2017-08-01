@@ -23,8 +23,8 @@ if( have_posts() ) {
           <section id="filming-hero" class="margin-top-large margin-bottom-mid padding-top-mid">
             <div class="container">
               <div class="grid-row justify-center">
-                <div class="grid-item item-s-12 highlight highlight-hero font-size-extra font-heavy">
-                  <?php echo $summary; ?>
+                <div class="grid-item item-s-11 highlight highlight-hero font-size-extra font-heavy">
+                  <p><?php echo $summary; ?></p>
                 </div>
               </div>
             </div>
@@ -35,7 +35,7 @@ if( have_posts() ) {
 
     if (!empty($gallery)) {
 ?>
-          <section class="margin-top-large margin-bottom-large">
+          <section>
             <div class="container-full margin-bottom-basic">
               <?php render_gallery_slider($gallery); ?>
             </div>
@@ -43,17 +43,17 @@ if( have_posts() ) {
 <?php
     }
 ?>
-          <section id="filming-content" class="margin-bottom-large">
+          <section id="filming-content" class="margin-top-large margin-bottom-large">
             <div class="container">
-              <div class="grid-row margin-top-large">
+              <div class="grid-row">
                 <div class="grid-item item-s-12 item-m-4">
                   <div class="highlight highlight-heading-wide margin-bottom-mid">
                     <h3 class="font-heavy font-size-large">Filming</h3>
                   </div>
                 </div>
               </div>
-              <div class="grid-row margin-top-large">
-                <div class="grid-item item-s-12 margin-bottom-basic text-columns text-columns-m-2">
+              <div class="grid-row">
+                <div class="grid-item item-s-12 text-columns text-columns-m-2">
                   <?php the_content(); ?>
                 </div>
               </div>
@@ -64,16 +64,16 @@ if( have_posts() ) {
 
     if (!empty($contact_email) || !empty($contact_phone)) {
 ?>
-          <section id="filming-contact" class="margin-bottom-large">
+          <section id="filming-contact" class="margin-top-large margin-bottom-large">
             <div class="container">
-              <div class="grid-row margin-top-large">
+              <div class="grid-row">
                 <div class="grid-item item-s-12 item-m-4">
                   <div class="highlight highlight-heading-wide margin-bottom-mid">
                     <h3 class="font-heavy font-size-large">Contact Us</h3>
                   </div>
                 </div>
               </div>
-              <div class="grid-row margin-top-large">
+              <div class="grid-row">
 <?php
       if (!empty($contact_email)) {
 ?>
