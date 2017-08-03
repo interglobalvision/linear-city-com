@@ -19,7 +19,7 @@ if( have_posts() ) {
 
     // Add map link to address
     if (!empty($map_url)) {
-      $address = '<a class="link-underline" href="' . esc_url($map_url) . '">' . $address . '</a>';
+      $address = '<a class="link-underline" target="_blank" rel="noopener" href="' . esc_url($map_url) . '">' . $address . '</a>';
     }
 
     // Split $gallery into two arrays
