@@ -66,6 +66,12 @@ function igv_cmb_metaboxes() {
   ) );
 
   $cmb_property->add_field( array(
+    'name'       => esc_html__( 'Darken splash image', 'cmb2' ),
+    'id'         => $prefix . 'splash_overlay',
+    'type'       => 'checkbox',
+  ) );
+
+  $cmb_property->add_field( array(
     'name'       => esc_html__( 'Gallery', 'cmb2' ),
     'id'         => $prefix . 'property_gallery',
     'type'       => 'file_list',
@@ -123,6 +129,12 @@ function igv_cmb_metaboxes() {
       'name'       => esc_html__( 'Splash Image', 'cmb2' ),
       'id'         => $prefix . 'splash_image',
       'type'       => 'file',
+    ) );
+
+    $cmb_home->add_field( array(
+      'name'       => esc_html__( 'Darken splash image', 'cmb2' ),
+      'id'         => $prefix . 'splash_overlay',
+      'type'       => 'checkbox',
     ) );
 
     // Get quote posts, to be used as slect field values
