@@ -16,6 +16,7 @@ if( have_posts() ) {
     $map_url = get_post_meta($post->ID, '_igv_property_map', true);
     $summary = get_post_meta($post->ID, '_igv_property_summary', true);
     $gallery = get_post_meta($post->ID, '_igv_property_gallery', true);
+    $splash_overlay = get_post_meta($post->ID,'_igv_splash_overlay', true);
 
     // Add map link to address
     if (!empty($map_url)) {
@@ -31,6 +32,13 @@ if( have_posts() ) {
 ?>
     <section class="splash-holder">
       <div class="container-full splash-with-image" style="background-image: url(<?php the_post_thumbnail_url('splash'); ?>)">
+<?php
+    if (!empty($splash_overlay)) {
+?>
+        <div class="splash-overlay"></div>
+<?php
+    }
+?>
         <div class="container splash-text grid-row margin-bottom-basic align-items-end justify-end" >
           <div class="grid-item text-align-right">
 
