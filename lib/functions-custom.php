@@ -42,7 +42,7 @@ function render_gallery_slider($images) {
 <div class="container">
   <div class="grid-row justify-center">
     <div class="swiper-container item-s-10 grid-row">
-      <div class="swiper-wrapper align-items-center margin-bottom-mid">
+      <div class="swiper-wrapper align-items-end margin-bottom-mid">
     <?php
       foreach($images as $image_id => $image) {
     ?>
