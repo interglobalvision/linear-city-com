@@ -50,9 +50,9 @@ if (!empty($home)) {
 
 ?>
         <div class="grid-item item-s-12 item-m-4 margin-bottom-mid">
-          <div class="font-size-mid margin-bottom-basic"><?php echo $quote; ?></div>
+          <div class="font-size-small margin-bottom-basic"><?php echo $quote; ?></div>
 <?php if (!empty($quote_author)) { ?>
-          <div class="font-bolder font-size-small">&emsp;- <?php echo $quote_author; ?></div>
+          <div class="font-bolder font-size-basic">&emsp;- <?php echo $quote_author; ?></div>
 <?php } ?>
         </div>
 <?php
