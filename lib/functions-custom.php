@@ -8,7 +8,7 @@ function render_what_we_do_section($id, $title, $text, $images) {
 
 <section id="what-we-do-<?php echo $id; ?>" class="margin-top-large margin-bottom-large">
   <div class="container">
-    <div class="grid-row">
+    <div class="grid-row align-items-center">
       <div class="grid-item item-s-12 item-m-6">
         <?php echo apply_filters('the_content', $text); ?>
       </div>
