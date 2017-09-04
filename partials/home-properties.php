@@ -36,7 +36,7 @@ if( $properties->have_posts() ) {
         <article <?php post_class('grid-item item-s-12 item-m-4 text-align-center margin-bottom-basic ' . $item_classes ); ?> id="post-<?php the_ID(); ?>">
 
           <a href="<?php the_permalink() ?>">
-            <?php the_post_thumbnail('item-l-5'); ?>
+            <?php the_post_thumbnail('property-thumb'); ?>
             <h3 class="font-heavy font-size-small"><?php echo the_title(); ?></h3>
           </a>
 
