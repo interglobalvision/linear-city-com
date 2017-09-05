@@ -28,7 +28,7 @@ if( have_posts() ) {
         <article <?php post_class('grid-item item-s-12 item-m-6 margin-top-mid'); ?> id="post-<?php the_ID(); ?>">
 
           <a href="<?php the_permalink() ?>">
-            <?php the_post_thumbnail('item-m-6', array('class'=>'margin-bottom-small')); ?>
+            <?php the_post_thumbnail('property-thumb', array('class'=>'margin-bottom-small')); ?>
 
             <h2 class="font-heavy font-size-mid"><?php the_title(); ?></h2>
 
