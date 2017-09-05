@@ -21,8 +21,10 @@ Site = {
           centerMode: true,
           variableWidth: true,
           dots: true,
-          arrows: false
+          arrows: false,
+          focusOnSelect: true
         });
+
       }
 
     });
