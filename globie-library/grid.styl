@@ -135,6 +135,13 @@ grid($width = false, $gutter = false, $size = false, $cols = 12)
       .text-columns-{$size}-{col}
         column-count: col
 
+    .item-{$size}-auto
+      flex-basis: auto
+    .grid-row > .item-{$size}-auto
+      max-width: none
+    .grid-column > .item-{$size}-auto
+      max-height: none
+
 // MARGINS & PADDING
 
 space-maker($micro = false, $tiny = false, $small = false, $basic = false, $mid = false, $large = false)
