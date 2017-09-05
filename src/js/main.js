@@ -20,7 +20,7 @@ Site = {
           loop: true,
           slidesPerView: 'auto',
           loopedSlides: 5,
-          spaceBetween: 32,
+          spaceBetween: 0,
           paginationClickable: true,
           centeredSlides: true,
           slideToClickedSlide: true,
