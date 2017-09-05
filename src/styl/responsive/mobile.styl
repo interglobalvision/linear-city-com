@@ -113,33 +113,43 @@ a.button, a.button:active, a.button:visited
 
 // SLIDER
 
-.swiper-container
+.slick-container,
+.slick-list
   overflow: visible
 
-.swiper-slide
-  font-size: 0
+.slick-slide
+  margin: 0 $margin-small
+  max-width: 90vw
+  height: 50vw
+  width: auto
+  &:focus
+    outline: 0
 
-.swiper-pagination
+.slick-dots
   width: 100%
   display: flex
-
-.swiper-pagination-bullet
-  height: 6px
-  border-radius: 0
-  background: $color-blue
-  opacity: 1
-  margin: 0
-  flex-grow: 1
-  &:hover
-    opacity: .5
-
-.swiper-pagination-bullet-active
-  background: $color-yellow
-  &:hover
-    opacity: 1
-
-.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
-  margin: 0
+  li
+    flex-grow: 1
+    button
+      font-size: 0
+      appearance: none
+      height: 6px
+      width: 100%
+      border: none
+      border-radius: 0
+      background: $color-blue
+      opacity: 1
+      margin: 0
+      cursor: pointer
+      &:focus
+        outline: 0
+      &:hover
+        opacity: .5
+    &.slick-active
+      button
+        background: $color-yellow
+        &:hover
+          opacity: 1
 
 // ******************************************************
 
