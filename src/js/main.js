@@ -13,18 +13,18 @@ Site = {
     $(document).ready(function () {
       Site.Header.init();
 
-      if ($('.swiper-slide').length > 1) {
-        var mySwiper = new Swiper ('.swiper-container', {
-          // Optional parameters
-          pagination: '.swiper-pagination',
-          loop: true,
-          slidesPerView: 'auto',
-          loopedSlides: 5,
-          spaceBetween: 0,
-          paginationClickable: true,
-          centeredSlides: true,
-          slideToClickedSlide: true,
+      if ($('.slick-slide').length > 1) {
+        $('.slick-container').slick({
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          centerMode: true,
+          variableWidth: true,
+          dots: true,
+          arrows: false,
+          focusOnSelect: true
         });
+
       }
 
     });
