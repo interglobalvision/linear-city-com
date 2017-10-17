@@ -26,7 +26,7 @@ if( have_posts() ) {
     if ($highlight === 'on') {
 
       if ($index > 0) {
-        render_divider();
+        //render_divider();
       }
 ?>
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -54,11 +54,6 @@ if( have_posts() ) {
       </div>
     </article>
 <?php
-
-      if ($index !== ($count - 1)) {
-        render_divider();
-      }
-
     } else {
 ?>
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -71,6 +66,10 @@ if( have_posts() ) {
       </div>
     </article>
 <?php
+    }
+
+    if ($index !== ($count - 1)) {
+      render_divider();
     }
 
   }
