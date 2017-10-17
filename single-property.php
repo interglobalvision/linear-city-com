@@ -76,7 +76,7 @@ if( have_posts() ) {
 
     <section class="margin-top-large margin-bottom-large">
       <div class="container">
-        <div class="grid-row justify-between">
+        <div class="grid-row justify-between" id="property-image-row">
 
 <?php
       foreach ($first_gallery as $id => $image) {
@@ -86,7 +86,7 @@ if( have_posts() ) {
           $offset = 'margin-top-large';
         }
 ?>
-          <div class="grid-item item-s-12 item-m-auto margin-bottom-basic <?php echo $offset; ?>">
+          <div class="grid-item item-s-12 item-l-auto margin-bottom-basic text-align-center <?php echo $offset; ?>">
             <?php echo wp_get_attachment_image($id, 'property-main'); ?>
           </div>
 <?php
