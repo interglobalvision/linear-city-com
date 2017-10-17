@@ -10,7 +10,7 @@ if( function_exists( 'add_image_size' ) ) {
 
   add_image_size( 'item-l-4', 790, 9999, false );
   add_image_size( 'property-thumb', 930, 616, true );
-  add_image_size( 'property-main', 614, 614, true );
+  add_image_size( 'property-main', 614, 614, false );
 
   add_image_size( 'splash', 1920, 9999, false );
 
