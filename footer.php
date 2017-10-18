@@ -18,8 +18,8 @@
   $footer_phone = IGV_get_option('_igv_site_options', '_igv_phone_number');
   $footer_address = IGV_get_option('_igv_site_options', '_igv_office_address');
 ?>
-      <div class="grid-row">
-        <div class="grid-item item-s-12 item-m-5 margin-bottom-basic">
+      <div class="grid-row justify-between">
+        <div class="grid-item item-s-12 item-m-auto margin-bottom-basic">
           <?php
             if ($footer_email) {
           ?>
@@ -29,7 +29,7 @@
             }
           ?>
         </div>
-        <div class="grid-item item-s-12 item-m-3 margin-bottom-basic">
+        <div class="grid-item item-s-12 item-m-auto margin-bottom-basic">
           <?php
             if ($footer_phone) {
           ?>
@@ -39,7 +39,7 @@
             }
           ?>
         </div>
-        <div class="grid-item item-s-12 item-m-4 margin-bottom-basic">
+        <div class="grid-item item-s-12 item-m-auto margin-bottom-basic">
           <?php
             if ($footer_address) {
           ?>
